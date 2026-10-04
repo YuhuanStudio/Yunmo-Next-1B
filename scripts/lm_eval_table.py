@@ -2,7 +2,7 @@
 import json, sys
 from pathlib import Path
 
-SRC = Path(sys.argv[1])
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / "data" / "lm-eval"
 ORDER = ["Yunmo-Next-1B-Base", "Qwen3.5-0.8B-Base", "LFM2.5-1.2B-Base", "MiniCPM5-1B-Base", "Qwen3.5-2B-Base", "MiniCPM5-2B-Base"]
 METRIC = {"arc_easy": "acc_norm,none", "arc_challenge": "acc_norm,none", "hellaswag": "acc_norm,none",
           "piqa": "acc_norm,none", "winogrande": "acc,none", "openbookqa": "acc_norm,none", "sciq": "acc_norm,none",
