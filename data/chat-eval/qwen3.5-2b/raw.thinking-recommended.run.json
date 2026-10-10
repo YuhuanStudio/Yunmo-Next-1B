@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen3.5-2B",
+  "effort": "thinking-recommended",
+  "max_tokens": 8192,
+  "dtype": "bfloat16",
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  },
+  "decoding": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "presence_penalty": 1.5,
+    "seed": 17
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "model": "openbmb/MiniCPM5-2B",
+  "effort": "thinking",
+  "max_tokens": 8192,
+  "dtype": "bfloat16",
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  },
+  "decoding": "greedy"
+}

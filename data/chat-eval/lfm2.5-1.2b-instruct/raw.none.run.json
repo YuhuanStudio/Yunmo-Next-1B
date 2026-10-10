@@ -1,0 +1,8 @@
+{
+  "model": "LiquidAI/LFM2.5-1.2B-Instruct",
+  "effort": "none",
+  "max_tokens": 1024,
+  "dtype": "bfloat16",
+  "chat_template_kwargs": {},
+  "decoding": "greedy"
+}

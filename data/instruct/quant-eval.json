@@ -1,0 +1,1036 @@
+{
+  "package": "/home/yuhuan/yunmo-next-runtime/release/staging/Yunmo-Next-1B-Instruct-pkg",
+  "context": 8192,
+  "rows_per_stratum": 8,
+  "variants": {
+    "fp32": {
+      "bits_per_byte": 0.6715564151508432,
+      "per_stratum": {
+        "code_c_cpp": {
+          "bits_per_byte": 0.816871642196476,
+          "nll_nats": 110574.462890625,
+          "utf8_bytes": 195288,
+          "tokens": 65530
+        },
+        "code_csharp": {
+          "bits_per_byte": 0.31361211564508895,
+          "nll_nats": 49825.0869140625,
+          "utf8_bytes": 229208,
+          "tokens": 65499
+        },
+        "code_documentation_config": {
+          "bits_per_byte": 0.7465019143081398,
+          "nll_nats": 102312.04296875,
+          "utf8_bytes": 197729,
+          "tokens": 65472
+        },
+        "code_go_rust": {
+          "bits_per_byte": 0.47412863955111834,
+          "nll_nats": 65340.3896484375,
+          "utf8_bytes": 198820,
+          "tokens": 65496
+        },
+        "code_java_kotlin": {
+          "bits_per_byte": 0.40893780708689226,
+          "nll_nats": 73164.8857421875,
+          "utf8_bytes": 258119,
+          "tokens": 65465
+        },
+        "code_javascript_typescript": {
+          "bits_per_byte": 0.5203780140982524,
+          "nll_nats": 79130.77001953125,
+          "utf8_bytes": 219382,
+          "tokens": 65493
+        },
+        "code_other_measured_value": {
+          "bits_per_byte": 0.4458526025728679,
+          "nll_nats": 70860.4287109375,
+          "utf8_bytes": 229291,
+          "tokens": 65479
+        },
+        "code_php_ruby": {
+          "bits_per_byte": 0.3656291245208218,
+          "nll_nats": 55865.64599609375,
+          "utf8_bytes": 220434,
+          "tokens": 65450
+        },
+        "code_python": {
+          "bits_per_byte": 0.5382463746361804,
+          "nll_nats": 79024.4052734375,
+          "utf8_bytes": 211814,
+          "tokens": 65508
+        },
+        "code_sql_shell": {
+          "bits_per_byte": 0.7681002965560856,
+          "nll_nats": 61420.5498046875,
+          "utf8_bytes": 115364,
+          "tokens": 40864
+        },
+        "code_swift_mobile": {
+          "bits_per_byte": 0.42347721206406347,
+          "nll_nats": 66273.07592773438,
+          "utf8_bytes": 225778,
+          "tokens": 65384
+        },
+        "converted_hant": {
+          "bits_per_byte": 1.0456396368183938,
+          "nll_nats": 198151.8203125,
+          "utf8_bytes": 273395,
+          "tokens": 65467
+        },
+        "english": {
+          "bits_per_byte": 0.81927600923132,
+          "nll_nats": 196403.173828125,
+          "utf8_bytes": 345854,
+          "tokens": 65456
+        },
+        "hant_knowledge": {
+          "bits_per_byte": 1.2154223635365244,
+          "nll_nats": 221592.30078125,
+          "utf8_bytes": 263028,
+          "tokens": 65487
+        },
+        "math": {
+          "bits_per_byte": 0.7205243514775461,
+          "nll_nats": 114991.12744140625,
+          "utf8_bytes": 230245,
+          "tokens": 65483
+        },
+        "native_hant": {
+          "bits_per_byte": 0.9006147404139516,
+          "nll_nats": 173499.5595703125,
+          "utf8_bytes": 277929,
+          "tokens": 65511
+        }
+      },
+      "quantization": {
+        "quantized_parameters": 0
+      },
+      "seconds": 589.2100949287415,
+      "relative_to_fp32": 0.0
+    },
+    "int8_channel": {
+      "bits_per_byte": 0.6716013104333312,
+      "per_stratum": {
+        "code_c_cpp": {
+          "bits_per_byte": 0.8169797496834177,
+          "nll_nats": 110589.0966796875,
+          "utf8_bytes": 195288,
+          "tokens": 65530
+        },
+        "code_csharp": {
+          "bits_per_byte": 0.31365239215590723,
+          "nll_nats": 49831.48583984375,
+          "utf8_bytes": 229208,
+          "tokens": 65499
+        },
+        "code_documentation_config": {
+          "bits_per_byte": 0.7464294498306094,
+          "nll_nats": 102302.111328125,
+          "utf8_bytes": 197729,
+          "tokens": 65472
+        },
+        "code_go_rust": {
+          "bits_per_byte": 0.47414994426573354,
+          "nll_nats": 65343.32568359375,
+          "utf8_bytes": 198820,
+          "tokens": 65496
+        },
+        "code_java_kotlin": {
+          "bits_per_byte": 0.40887291377558155,
+          "nll_nats": 73153.275390625,
+          "utf8_bytes": 258119,
+          "tokens": 65465
+        },
+        "code_javascript_typescript": {
+          "bits_per_byte": 0.5204227244009199,
+          "nll_nats": 79137.56884765625,
+          "utf8_bytes": 219382,
+          "tokens": 65493
+        },
+        "code_other_measured_value": {
+          "bits_per_byte": 0.4459275871556564,
+          "nll_nats": 70872.34619140625,
+          "utf8_bytes": 229291,
+          "tokens": 65479
+        },
+        "code_php_ruby": {
+          "bits_per_byte": 0.36571175573620673,
+          "nll_nats": 55878.271484375,
+          "utf8_bytes": 220434,
+          "tokens": 65450
+        },
+        "code_python": {
+          "bits_per_byte": 0.538278245322293,
+          "nll_nats": 79029.08447265625,
+          "utf8_bytes": 211814,
+          "tokens": 65508
+        },
+        "code_sql_shell": {
+          "bits_per_byte": 0.7682114790792115,
+          "nll_nats": 61429.4404296875,
+          "utf8_bytes": 115364,
+          "tokens": 40864
+        },
+        "code_swift_mobile": {
+          "bits_per_byte": 0.4234697902210092,
+          "nll_nats": 66271.91442871094,
+          "utf8_bytes": 225778,
+          "tokens": 65384
+        },
+        "converted_hant": {
+          "bits_per_byte": 1.045670041189606,
+          "nll_nats": 198157.58203125,
+          "utf8_bytes": 273395,
+          "tokens": 65467
+        },
+        "english": {
+          "bits_per_byte": 0.8193150183300822,
+          "nll_nats": 196412.525390625,
+          "utf8_bytes": 345854,
+          "tokens": 65456
+        },
+        "hant_knowledge": {
+          "bits_per_byte": 1.2155483030968202,
+          "nll_nats": 221615.26171875,
+          "utf8_bytes": 263028,
+          "tokens": 65487
+        },
+        "math": {
+          "bits_per_byte": 0.7206194752509236,
+          "nll_nats": 115006.30859375,
+          "utf8_bytes": 230245,
+          "tokens": 65483
+        },
+        "native_hant": {
+          "bits_per_byte": 0.9006949353963976,
+          "nll_nats": 173515.0087890625,
+          "utf8_bytes": 277929,
+          "tokens": 65511
+        }
+      },
+      "quantization": {
+        "quantized_parameters": 940154880,
+        "skipped": [],
+        "squared_weight_error": 64.6869794188242
+      },
+      "seconds": 462.99823236465454,
+      "relative_to_fp32": 6.685258524097293e-05
+    },
+    "affine8_g64": {
+      "bits_per_byte": 0.6715810458287702,
+      "per_stratum": {
+        "code_c_cpp": {
+          "bits_per_byte": 0.8168266028210355,
+          "nll_nats": 110568.3662109375,
+          "utf8_bytes": 195288,
+          "tokens": 65530
+        },
+        "code_csharp": {
+          "bits_per_byte": 0.31362094236306454,
+          "nll_nats": 49826.4892578125,
+          "utf8_bytes": 229208,
+          "tokens": 65499
+        },
+        "code_documentation_config": {
+          "bits_per_byte": 0.7465084125975702,
+          "nll_nats": 102312.93359375,
+          "utf8_bytes": 197729,
+          "tokens": 65472
+        },
+        "code_go_rust": {
+          "bits_per_byte": 0.4741957708379659,
+          "nll_nats": 65349.64111328125,
+          "utf8_bytes": 198820,
+          "tokens": 65496
+        },
+        "code_java_kotlin": {
+          "bits_per_byte": 0.40897850936819796,
+          "nll_nats": 73172.16796875,
+          "utf8_bytes": 258119,
+          "tokens": 65465
+        },
+        "code_javascript_typescript": {
+          "bits_per_byte": 0.5204343996853567,
+          "nll_nats": 79139.34423828125,
+          "utf8_bytes": 219382,
+          "tokens": 65493
+        },
+        "code_other_measured_value": {
+          "bits_per_byte": 0.44589254191716465,
+          "nll_nats": 70866.7763671875,
+          "utf8_bytes": 229291,
+          "tokens": 65479
+        },
+        "code_php_ruby": {
+          "bits_per_byte": 0.365709589051594,
+          "nll_nats": 55877.9404296875,
+          "utf8_bytes": 220434,
+          "tokens": 65450
+        },
+        "code_python": {
+          "bits_per_byte": 0.5382673601343929,
+          "nll_nats": 79027.486328125,
+          "utf8_bytes": 211814,
+          "tokens": 65508
+        },
+        "code_sql_shell": {
+          "bits_per_byte": 0.768128202099291,
+          "nll_nats": 61422.78125,
+          "utf8_bytes": 115364,
+          "tokens": 40864
+        },
+        "code_swift_mobile": {
+          "bits_per_byte": 0.42347245085229224,
+          "nll_nats": 66272.33081054688,
+          "utf8_bytes": 225778,
+          "tokens": 65384
+        },
+        "converted_hant": {
+          "bits_per_byte": 1.045665578446306,
+          "nll_nats": 198156.736328125,
+          "utf8_bytes": 273395,
+          "tokens": 65467
+        },
+        "english": {
+          "bits_per_byte": 0.8192687744611236,
+          "nll_nats": 196401.439453125,
+          "utf8_bytes": 345854,
+          "tokens": 65456
+        },
+        "hant_knowledge": {
+          "bits_per_byte": 1.2154610367087486,
+          "nll_nats": 221599.3515625,
+          "utf8_bytes": 263028,
+          "tokens": 65487
+        },
+        "math": {
+          "bits_per_byte": 0.7205786366761899,
+          "nll_nats": 114999.791015625,
+          "utf8_bytes": 230245,
+          "tokens": 65483
+        },
+        "native_hant": {
+          "bits_per_byte": 0.9006127532816433,
+          "nll_nats": 173499.1767578125,
+          "utf8_bytes": 277929,
+          "tokens": 65511
+        }
+      },
+      "quantization": {
+        "quantized_parameters": 716021760,
+        "skipped": [
+          "layers.0.mlp.down_proj.weight",
+          "layers.1.mlp.down_proj.weight",
+          "layers.2.mlp.down_proj.weight",
+          "layers.3.mlp.down_proj.weight",
+          "layers.4.mlp.down_proj.weight",
+          "layers.5.mlp.down_proj.weight",
+          "layers.6.mlp.down_proj.weight",
+          "layers.7.mlp.down_proj.weight",
+          "layers.8.mlp.down_proj.weight",
+          "layers.9.mlp.down_proj.weight",
+          "layers.10.mlp.down_proj.weight",
+          "layers.11.mlp.down_proj.weight",
+          "layers.12.mlp.down_proj.weight",
+          "layers.13.mlp.down_proj.weight",
+          "layers.14.mlp.down_proj.weight",
+          "layers.15.mlp.down_proj.weight",
+          "layers.16.mlp.down_proj.weight",
+          "layers.17.mlp.down_proj.weight",
+          "layers.18.mlp.down_proj.weight",
+          "layers.19.mlp.down_proj.weight",
+          "layers.20.mlp.down_proj.weight",
+          "layers.21.mlp.down_proj.weight",
+          "layers.22.mlp.down_proj.weight",
+          "layers.23.mlp.down_proj.weight",
+          "layers.24.mlp.down_proj.weight",
+          "layers.25.mlp.down_proj.weight",
+          "layers.26.mlp.down_proj.weight",
+          "layers.27.mlp.down_proj.weight",
+          "layers.28.mlp.down_proj.weight",
+          "layers.29.mlp.down_proj.weight",
+          "layers.30.mlp.down_proj.weight",
+          "layers.31.mlp.down_proj.weight",
+          "layers.32.mlp.down_proj.weight",
+          "layers.33.mlp.down_proj.weight",
+          "layers.34.mlp.down_proj.weight",
+          "layers.35.mlp.down_proj.weight",
+          "layers.36.mlp.down_proj.weight",
+          "layers.37.mlp.down_proj.weight",
+          "layers.38.mlp.down_proj.weight",
+          "layers.39.mlp.down_proj.weight",
+          "layers.40.mlp.down_proj.weight",
+          "layers.41.mlp.down_proj.weight",
+          "layers.42.mlp.down_proj.weight",
+          "layers.43.mlp.down_proj.weight",
+          "layers.44.mlp.down_proj.weight",
+          "layers.45.mlp.down_proj.weight",
+          "layers.46.mlp.down_proj.weight",
+          "layers.47.mlp.down_proj.weight",
+          "layers.48.mlp.down_proj.weight",
+          "layers.49.mlp.down_proj.weight",
+          "layers.50.mlp.down_proj.weight",
+          "layers.51.mlp.down_proj.weight",
+          "layers.52.mlp.down_proj.weight",
+          "layers.53.mlp.down_proj.weight",
+          "layers.54.mlp.down_proj.weight",
+          "layers.55.mlp.down_proj.weight",
+          "layers.56.mlp.down_proj.weight",
+          "layers.57.mlp.down_proj.weight",
+          "layers.58.mlp.down_proj.weight",
+          "layers.59.mlp.down_proj.weight"
+        ],
+        "squared_weight_error": 20.300241613556864
+      },
+      "seconds": 462.74162125587463,
+      "relative_to_fp32": 3.667700489695669e-05
+    },
+    "affine4_g64": {
+      "bits_per_byte": 0.6764073832230035,
+      "per_stratum": {
+        "code_c_cpp": {
+          "bits_per_byte": 0.8231192629644358,
+          "nll_nats": 111420.16162109375,
+          "utf8_bytes": 195288,
+          "tokens": 65530
+        },
+        "code_csharp": {
+          "bits_per_byte": 0.3166041425360778,
+          "nll_nats": 50300.44482421875,
+          "utf8_bytes": 229208,
+          "tokens": 65499
+        },
+        "code_documentation_config": {
+          "bits_per_byte": 0.7510017944804691,
+          "nll_nats": 102928.775390625,
+          "utf8_bytes": 197729,
+          "tokens": 65472
+        },
+        "code_go_rust": {
+          "bits_per_byte": 0.47938666295956456,
+          "nll_nats": 66065.005859375,
+          "utf8_bytes": 198820,
+          "tokens": 65496
+        },
+        "code_java_kotlin": {
+          "bits_per_byte": 0.41237888285632823,
+          "nll_nats": 73780.5439453125,
+          "utf8_bytes": 258119,
+          "tokens": 65465
+        },
+        "code_javascript_typescript": {
+          "bits_per_byte": 0.5244825862141855,
+          "nll_nats": 79754.927734375,
+          "utf8_bytes": 219382,
+          "tokens": 65493
+        },
+        "code_other_measured_value": {
+          "bits_per_byte": 0.4513734242795202,
+          "nll_nats": 71737.8662109375,
+          "utf8_bytes": 229291,
+          "tokens": 65479
+        },
+        "code_php_ruby": {
+          "bits_per_byte": 0.3692605582371331,
+          "nll_nats": 56420.50439453125,
+          "utf8_bytes": 220434,
+          "tokens": 65450
+        },
+        "code_python": {
+          "bits_per_byte": 0.5428316295032853,
+          "nll_nats": 79697.6044921875,
+          "utf8_bytes": 211814,
+          "tokens": 65508
+        },
+        "code_sql_shell": {
+          "bits_per_byte": 0.774812843689883,
+          "nll_nats": 61957.3134765625,
+          "utf8_bytes": 115364,
+          "tokens": 40864
+        },
+        "code_swift_mobile": {
+          "bits_per_byte": 0.4266743868288581,
+          "nll_nats": 66773.42541503906,
+          "utf8_bytes": 225778,
+          "tokens": 65384
+        },
+        "converted_hant": {
+          "bits_per_byte": 1.0508119253833867,
+          "nll_nats": 199131.984375,
+          "utf8_bytes": 273395,
+          "tokens": 65467
+        },
+        "english": {
+          "bits_per_byte": 0.8237607683213067,
+          "nll_nats": 197478.294921875,
+          "utf8_bytes": 345854,
+          "tokens": 65456
+        },
+        "hant_knowledge": {
+          "bits_per_byte": 1.2225915126436706,
+          "nll_nats": 222899.359375,
+          "utf8_bytes": 263028,
+          "tokens": 65487
+        },
+        "math": {
+          "bits_per_byte": 0.7257040766745557,
+          "nll_nats": 115817.77880859375,
+          "utf8_bytes": 230245,
+          "tokens": 65483
+        },
+        "native_hant": {
+          "bits_per_byte": 0.9067358328215679,
+          "nll_nats": 174678.76171875,
+          "utf8_bytes": 277929,
+          "tokens": 65511
+        }
+      },
+      "quantization": {
+        "quantized_parameters": 716021760,
+        "skipped": [
+          "layers.0.mlp.down_proj.weight",
+          "layers.1.mlp.down_proj.weight",
+          "layers.2.mlp.down_proj.weight",
+          "layers.3.mlp.down_proj.weight",
+          "layers.4.mlp.down_proj.weight",
+          "layers.5.mlp.down_proj.weight",
+          "layers.6.mlp.down_proj.weight",
+          "layers.7.mlp.down_proj.weight",
+          "layers.8.mlp.down_proj.weight",
+          "layers.9.mlp.down_proj.weight",
+          "layers.10.mlp.down_proj.weight",
+          "layers.11.mlp.down_proj.weight",
+          "layers.12.mlp.down_proj.weight",
+          "layers.13.mlp.down_proj.weight",
+          "layers.14.mlp.down_proj.weight",
+          "layers.15.mlp.down_proj.weight",
+          "layers.16.mlp.down_proj.weight",
+          "layers.17.mlp.down_proj.weight",
+          "layers.18.mlp.down_proj.weight",
+          "layers.19.mlp.down_proj.weight",
+          "layers.20.mlp.down_proj.weight",
+          "layers.21.mlp.down_proj.weight",
+          "layers.22.mlp.down_proj.weight",
+          "layers.23.mlp.down_proj.weight",
+          "layers.24.mlp.down_proj.weight",
+          "layers.25.mlp.down_proj.weight",
+          "layers.26.mlp.down_proj.weight",
+          "layers.27.mlp.down_proj.weight",
+          "layers.28.mlp.down_proj.weight",
+          "layers.29.mlp.down_proj.weight",
+          "layers.30.mlp.down_proj.weight",
+          "layers.31.mlp.down_proj.weight",
+          "layers.32.mlp.down_proj.weight",
+          "layers.33.mlp.down_proj.weight",
+          "layers.34.mlp.down_proj.weight",
+          "layers.35.mlp.down_proj.weight",
+          "layers.36.mlp.down_proj.weight",
+          "layers.37.mlp.down_proj.weight",
+          "layers.38.mlp.down_proj.weight",
+          "layers.39.mlp.down_proj.weight",
+          "layers.40.mlp.down_proj.weight",
+          "layers.41.mlp.down_proj.weight",
+          "layers.42.mlp.down_proj.weight",
+          "layers.43.mlp.down_proj.weight",
+          "layers.44.mlp.down_proj.weight",
+          "layers.45.mlp.down_proj.weight",
+          "layers.46.mlp.down_proj.weight",
+          "layers.47.mlp.down_proj.weight",
+          "layers.48.mlp.down_proj.weight",
+          "layers.49.mlp.down_proj.weight",
+          "layers.50.mlp.down_proj.weight",
+          "layers.51.mlp.down_proj.weight",
+          "layers.52.mlp.down_proj.weight",
+          "layers.53.mlp.down_proj.weight",
+          "layers.54.mlp.down_proj.weight",
+          "layers.55.mlp.down_proj.weight",
+          "layers.56.mlp.down_proj.weight",
+          "layers.57.mlp.down_proj.weight",
+          "layers.58.mlp.down_proj.weight",
+          "layers.59.mlp.down_proj.weight"
+        ],
+        "squared_weight_error": 5868.489263385534
+      },
+      "seconds": 461.8214190006256,
+      "relative_to_fp32": 0.007223470676057442
+    },
+    "affine4_g32": {
+      "bits_per_byte": 0.6756260501530852,
+      "per_stratum": {
+        "code_c_cpp": {
+          "bits_per_byte": 0.8209839795773771,
+          "nll_nats": 111131.12255859375,
+          "utf8_bytes": 195288,
+          "tokens": 65530
+        },
+        "code_csharp": {
+          "bits_per_byte": 0.316067486073924,
+          "nll_nats": 50215.18359375,
+          "utf8_bytes": 229208,
+          "tokens": 65499
+        },
+        "code_documentation_config": {
+          "bits_per_byte": 0.7506205258739631,
+          "nll_nats": 102876.5205078125,
+          "utf8_bytes": 197729,
+          "tokens": 65472
+        },
+        "code_go_rust": {
+          "bits_per_byte": 0.47795026529894646,
+          "nll_nats": 65867.0537109375,
+          "utf8_bytes": 198820,
+          "tokens": 65496
+        },
+        "code_java_kotlin": {
+          "bits_per_byte": 0.41268859572287625,
+          "nll_nats": 73835.9560546875,
+          "utf8_bytes": 258119,
+          "tokens": 65465
+        },
+        "code_javascript_typescript": {
+          "bits_per_byte": 0.5238537295777805,
+          "nll_nats": 79659.30126953125,
+          "utf8_bytes": 219382,
+          "tokens": 65493
+        },
+        "code_other_measured_value": {
+          "bits_per_byte": 0.4491603452726938,
+          "nll_nats": 71386.13623046875,
+          "utf8_bytes": 229291,
+          "tokens": 65479
+        },
+        "code_php_ruby": {
+          "bits_per_byte": 0.36873310475333776,
+          "nll_nats": 56339.9130859375,
+          "utf8_bytes": 220434,
+          "tokens": 65450
+        },
+        "code_python": {
+          "bits_per_byte": 0.5425554324104891,
+          "nll_nats": 79657.0537109375,
+          "utf8_bytes": 211814,
+          "tokens": 65508
+        },
+        "code_sql_shell": {
+          "bits_per_byte": 0.7734139027821415,
+          "nll_nats": 61845.4482421875,
+          "utf8_bytes": 115364,
+          "tokens": 40864
+        },
+        "code_swift_mobile": {
+          "bits_per_byte": 0.42582536776421454,
+          "nll_nats": 66640.55615234375,
+          "utf8_bytes": 225778,
+          "tokens": 65384
+        },
+        "converted_hant": {
+          "bits_per_byte": 1.0499613656753608,
+          "nll_nats": 198970.80078125,
+          "utf8_bytes": 273395,
+          "tokens": 65467
+        },
+        "english": {
+          "bits_per_byte": 0.8233389274469098,
+          "nll_nats": 197377.16796875,
+          "utf8_bytes": 345854,
+          "tokens": 65456
+        },
+        "hant_knowledge": {
+          "bits_per_byte": 1.2221584373915009,
+          "nll_nats": 222820.40234375,
+          "utf8_bytes": 263028,
+          "tokens": 65487
+        },
+        "math": {
+          "bits_per_byte": 0.7247801635819962,
+          "nll_nats": 115670.328125,
+          "utf8_bytes": 230245,
+          "tokens": 65483
+        },
+        "native_hant": {
+          "bits_per_byte": 0.9060699052451466,
+          "nll_nats": 174550.4736328125,
+          "utf8_bytes": 277929,
+          "tokens": 65511
+        }
+      },
+      "quantization": {
+        "quantized_parameters": 828088320,
+        "skipped": [
+          "layers.1.mlp.down_proj.weight",
+          "layers.2.mlp.down_proj.weight",
+          "layers.5.mlp.down_proj.weight",
+          "layers.6.mlp.down_proj.weight",
+          "layers.9.mlp.down_proj.weight",
+          "layers.10.mlp.down_proj.weight",
+          "layers.13.mlp.down_proj.weight",
+          "layers.14.mlp.down_proj.weight",
+          "layers.17.mlp.down_proj.weight",
+          "layers.18.mlp.down_proj.weight",
+          "layers.21.mlp.down_proj.weight",
+          "layers.22.mlp.down_proj.weight",
+          "layers.25.mlp.down_proj.weight",
+          "layers.26.mlp.down_proj.weight",
+          "layers.29.mlp.down_proj.weight",
+          "layers.30.mlp.down_proj.weight",
+          "layers.33.mlp.down_proj.weight",
+          "layers.34.mlp.down_proj.weight",
+          "layers.37.mlp.down_proj.weight",
+          "layers.38.mlp.down_proj.weight",
+          "layers.41.mlp.down_proj.weight",
+          "layers.42.mlp.down_proj.weight",
+          "layers.45.mlp.down_proj.weight",
+          "layers.46.mlp.down_proj.weight",
+          "layers.49.mlp.down_proj.weight",
+          "layers.50.mlp.down_proj.weight",
+          "layers.53.mlp.down_proj.weight",
+          "layers.54.mlp.down_proj.weight",
+          "layers.57.mlp.down_proj.weight",
+          "layers.58.mlp.down_proj.weight"
+        ],
+        "squared_weight_error": 5058.388192905113
+      },
+      "seconds": 461.63635993003845,
+      "relative_to_fp32": 0.006060004655495499
+    },
+    "affine8_g64+emb": {
+      "bits_per_byte": 0.6716182928143443,
+      "per_stratum": {
+        "code_c_cpp": {
+          "bits_per_byte": 0.8169779244452332,
+          "nll_nats": 110588.849609375,
+          "utf8_bytes": 195288,
+          "tokens": 65530
+        },
+        "code_csharp": {
+          "bits_per_byte": 0.3136684597330578,
+          "nll_nats": 49834.03857421875,
+          "utf8_bytes": 229208,
+          "tokens": 65499
+        },
+        "code_documentation_config": {
+          "bits_per_byte": 0.7465378615342105,
+          "nll_nats": 102316.9697265625,
+          "utf8_bytes": 197729,
+          "tokens": 65472
+        },
+        "code_go_rust": {
+          "bits_per_byte": 0.4741726803963981,
+          "nll_nats": 65346.458984375,
+          "utf8_bytes": 198820,
+          "tokens": 65496
+        },
+        "code_java_kotlin": {
+          "bits_per_byte": 0.4089733458496093,
+          "nll_nats": 73171.244140625,
+          "utf8_bytes": 258119,
+          "tokens": 65465
+        },
+        "code_javascript_typescript": {
+          "bits_per_byte": 0.5203921586603932,
+          "nll_nats": 79132.9208984375,
+          "utf8_bytes": 219382,
+          "tokens": 65493
+        },
+        "code_other_measured_value": {
+          "bits_per_byte": 0.44594090539085074,
+          "nll_nats": 70874.462890625,
+          "utf8_bytes": 229291,
+          "tokens": 65479
+        },
+        "code_php_ruby": {
+          "bits_per_byte": 0.36573500445384316,
+          "nll_nats": 55881.82373046875,
+          "utf8_bytes": 220434,
+          "tokens": 65450
+        },
+        "code_python": {
+          "bits_per_byte": 0.5382969593315546,
+          "nll_nats": 79031.83203125,
+          "utf8_bytes": 211814,
+          "tokens": 65508
+        },
+        "code_sql_shell": {
+          "bits_per_byte": 0.7681064272268466,
+          "nll_nats": 61421.0400390625,
+          "utf8_bytes": 115364,
+          "tokens": 40864
+        },
+        "code_swift_mobile": {
+          "bits_per_byte": 0.42349168524303066,
+          "nll_nats": 66275.34094238281,
+          "utf8_bytes": 225778,
+          "tokens": 65384
+        },
+        "converted_hant": {
+          "bits_per_byte": 1.0457270158892882,
+          "nll_nats": 198168.37890625,
+          "utf8_bytes": 273395,
+          "tokens": 65467
+        },
+        "english": {
+          "bits_per_byte": 0.8193186683042356,
+          "nll_nats": 196413.400390625,
+          "utf8_bytes": 345854,
+          "tokens": 65456
+        },
+        "hant_knowledge": {
+          "bits_per_byte": 1.215535062088269,
+          "nll_nats": 221612.84765625,
+          "utf8_bytes": 263028,
+          "tokens": 65487
+        },
+        "math": {
+          "bits_per_byte": 0.720615470329263,
+          "nll_nats": 115005.66943359375,
+          "utf8_bytes": 230245,
+          "tokens": 65483
+        },
+        "native_hant": {
+          "bits_per_byte": 0.9006833927936776,
+          "nll_nats": 173512.78515625,
+          "utf8_bytes": 277929,
+          "tokens": 65511
+        }
+      },
+      "quantization": {
+        "quantized_parameters": 783130624,
+        "skipped": [
+          "layers.0.mlp.down_proj.weight",
+          "layers.1.mlp.down_proj.weight",
+          "layers.2.mlp.down_proj.weight",
+          "layers.3.mlp.down_proj.weight",
+          "layers.4.mlp.down_proj.weight",
+          "layers.5.mlp.down_proj.weight",
+          "layers.6.mlp.down_proj.weight",
+          "layers.7.mlp.down_proj.weight",
+          "layers.8.mlp.down_proj.weight",
+          "layers.9.mlp.down_proj.weight",
+          "layers.10.mlp.down_proj.weight",
+          "layers.11.mlp.down_proj.weight",
+          "layers.12.mlp.down_proj.weight",
+          "layers.13.mlp.down_proj.weight",
+          "layers.14.mlp.down_proj.weight",
+          "layers.15.mlp.down_proj.weight",
+          "layers.16.mlp.down_proj.weight",
+          "layers.17.mlp.down_proj.weight",
+          "layers.18.mlp.down_proj.weight",
+          "layers.19.mlp.down_proj.weight",
+          "layers.20.mlp.down_proj.weight",
+          "layers.21.mlp.down_proj.weight",
+          "layers.22.mlp.down_proj.weight",
+          "layers.23.mlp.down_proj.weight",
+          "layers.24.mlp.down_proj.weight",
+          "layers.25.mlp.down_proj.weight",
+          "layers.26.mlp.down_proj.weight",
+          "layers.27.mlp.down_proj.weight",
+          "layers.28.mlp.down_proj.weight",
+          "layers.29.mlp.down_proj.weight",
+          "layers.30.mlp.down_proj.weight",
+          "layers.31.mlp.down_proj.weight",
+          "layers.32.mlp.down_proj.weight",
+          "layers.33.mlp.down_proj.weight",
+          "layers.34.mlp.down_proj.weight",
+          "layers.35.mlp.down_proj.weight",
+          "layers.36.mlp.down_proj.weight",
+          "layers.37.mlp.down_proj.weight",
+          "layers.38.mlp.down_proj.weight",
+          "layers.39.mlp.down_proj.weight",
+          "layers.40.mlp.down_proj.weight",
+          "layers.41.mlp.down_proj.weight",
+          "layers.42.mlp.down_proj.weight",
+          "layers.43.mlp.down_proj.weight",
+          "layers.44.mlp.down_proj.weight",
+          "layers.45.mlp.down_proj.weight",
+          "layers.46.mlp.down_proj.weight",
+          "layers.47.mlp.down_proj.weight",
+          "layers.48.mlp.down_proj.weight",
+          "layers.49.mlp.down_proj.weight",
+          "layers.50.mlp.down_proj.weight",
+          "layers.51.mlp.down_proj.weight",
+          "layers.52.mlp.down_proj.weight",
+          "layers.53.mlp.down_proj.weight",
+          "layers.54.mlp.down_proj.weight",
+          "layers.55.mlp.down_proj.weight",
+          "layers.56.mlp.down_proj.weight",
+          "layers.57.mlp.down_proj.weight",
+          "layers.58.mlp.down_proj.weight",
+          "layers.59.mlp.down_proj.weight"
+        ],
+        "squared_weight_error": 37.081552648713114
+      },
+      "seconds": 461.590683221817,
+      "relative_to_fp32": 9.214067813978488e-05
+    },
+    "affine4_g64+emb": {
+      "bits_per_byte": 0.6874502139010945,
+      "per_stratum": {
+        "code_c_cpp": {
+          "bits_per_byte": 0.8377999242224498,
+          "nll_nats": 113407.384765625,
+          "utf8_bytes": 195288,
+          "tokens": 65530
+        },
+        "code_csharp": {
+          "bits_per_byte": 0.32367014848478276,
+          "nll_nats": 51423.0556640625,
+          "utf8_bytes": 229208,
+          "tokens": 65499
+        },
+        "code_documentation_config": {
+          "bits_per_byte": 0.7647934875053243,
+          "nll_nats": 104819.0,
+          "utf8_bytes": 197729,
+          "tokens": 65472
+        },
+        "code_go_rust": {
+          "bits_per_byte": 0.48755019875805744,
+          "nll_nats": 67190.03515625,
+          "utf8_bytes": 198820,
+          "tokens": 65496
+        },
+        "code_java_kotlin": {
+          "bits_per_byte": 0.42013326239593934,
+          "nll_nats": 75167.91455078125,
+          "utf8_bytes": 258119,
+          "tokens": 65465
+        },
+        "code_javascript_typescript": {
+          "bits_per_byte": 0.5336568937148816,
+          "nll_nats": 81150.009765625,
+          "utf8_bytes": 219382,
+          "tokens": 65493
+        },
+        "code_other_measured_value": {
+          "bits_per_byte": 0.4586079664435141,
+          "nll_nats": 72887.66943359375,
+          "utf8_bytes": 229291,
+          "tokens": 65479
+        },
+        "code_php_ruby": {
+          "bits_per_byte": 0.376791151830227,
+          "nll_nats": 57571.1279296875,
+          "utf8_bytes": 220434,
+          "tokens": 65450
+        },
+        "code_python": {
+          "bits_per_byte": 0.5539692553203283,
+          "nll_nats": 81332.8115234375,
+          "utf8_bytes": 211814,
+          "tokens": 65508
+        },
+        "code_sql_shell": {
+          "bits_per_byte": 0.7900062090348565,
+          "nll_nats": 63172.2392578125,
+          "utf8_bytes": 115364,
+          "tokens": 40864
+        },
+        "code_swift_mobile": {
+          "bits_per_byte": 0.4348031590690389,
+          "nll_nats": 68045.55700683594,
+          "utf8_bytes": 225778,
+          "tokens": 65384
+        },
+        "converted_hant": {
+          "bits_per_byte": 1.0648537874250363,
+          "nll_nats": 201792.958984375,
+          "utf8_bytes": 273395,
+          "tokens": 65467
+        },
+        "english": {
+          "bits_per_byte": 0.8353885268290889,
+          "nll_nats": 200265.791015625,
+          "utf8_bytes": 345854,
+          "tokens": 65456
+        },
+        "hant_knowledge": {
+          "bits_per_byte": 1.2383418315813273,
+          "nll_nats": 225770.912109375,
+          "utf8_bytes": 263028,
+          "tokens": 65487
+        },
+        "math": {
+          "bits_per_byte": 0.737708090476424,
+          "nll_nats": 117733.54345703125,
+          "utf8_bytes": 230245,
+          "tokens": 65483
+        },
+        "native_hant": {
+          "bits_per_byte": 0.920705606133488,
+          "nll_nats": 177369.978515625,
+          "utf8_bytes": 277929,
+          "tokens": 65511
+        }
+      },
+      "quantization": {
+        "quantized_parameters": 783130624,
+        "skipped": [
+          "layers.0.mlp.down_proj.weight",
+          "layers.1.mlp.down_proj.weight",
+          "layers.2.mlp.down_proj.weight",
+          "layers.3.mlp.down_proj.weight",
+          "layers.4.mlp.down_proj.weight",
+          "layers.5.mlp.down_proj.weight",
+          "layers.6.mlp.down_proj.weight",
+          "layers.7.mlp.down_proj.weight",
+          "layers.8.mlp.down_proj.weight",
+          "layers.9.mlp.down_proj.weight",
+          "layers.10.mlp.down_proj.weight",
+          "layers.11.mlp.down_proj.weight",
+          "layers.12.mlp.down_proj.weight",
+          "layers.13.mlp.down_proj.weight",
+          "layers.14.mlp.down_proj.weight",
+          "layers.15.mlp.down_proj.weight",
+          "layers.16.mlp.down_proj.weight",
+          "layers.17.mlp.down_proj.weight",
+          "layers.18.mlp.down_proj.weight",
+          "layers.19.mlp.down_proj.weight",
+          "layers.20.mlp.down_proj.weight",
+          "layers.21.mlp.down_proj.weight",
+          "layers.22.mlp.down_proj.weight",
+          "layers.23.mlp.down_proj.weight",
+          "layers.24.mlp.down_proj.weight",
+          "layers.25.mlp.down_proj.weight",
+          "layers.26.mlp.down_proj.weight",
+          "layers.27.mlp.down_proj.weight",
+          "layers.28.mlp.down_proj.weight",
+          "layers.29.mlp.down_proj.weight",
+          "layers.30.mlp.down_proj.weight",
+          "layers.31.mlp.down_proj.weight",
+          "layers.32.mlp.down_proj.weight",
+          "layers.33.mlp.down_proj.weight",
+          "layers.34.mlp.down_proj.weight",
+          "layers.35.mlp.down_proj.weight",
+          "layers.36.mlp.down_proj.weight",
+          "layers.37.mlp.down_proj.weight",
+          "layers.38.mlp.down_proj.weight",
+          "layers.39.mlp.down_proj.weight",
+          "layers.40.mlp.down_proj.weight",
+          "layers.41.mlp.down_proj.weight",
+          "layers.42.mlp.down_proj.weight",
+          "layers.43.mlp.down_proj.weight",
+          "layers.44.mlp.down_proj.weight",
+          "layers.45.mlp.down_proj.weight",
+          "layers.46.mlp.down_proj.weight",
+          "layers.47.mlp.down_proj.weight",
+          "layers.48.mlp.down_proj.weight",
+          "layers.49.mlp.down_proj.weight",
+          "layers.50.mlp.down_proj.weight",
+          "layers.51.mlp.down_proj.weight",
+          "layers.52.mlp.down_proj.weight",
+          "layers.53.mlp.down_proj.weight",
+          "layers.54.mlp.down_proj.weight",
+          "layers.55.mlp.down_proj.weight",
+          "layers.56.mlp.down_proj.weight",
+          "layers.57.mlp.down_proj.weight",
+          "layers.58.mlp.down_proj.weight",
+          "layers.59.mlp.down_proj.weight"
+        ],
+        "squared_weight_error": 10719.311040729284
+      },
+      "seconds": 461.69823932647705,
+      "relative_to_fp32": 0.023667108811225246
+    }
+  }
+}

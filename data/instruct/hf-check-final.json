@@ -1,0 +1,26 @@
+{
+  "prompts": {
+    "臺灣最高的山是": {
+      "tokenizer_ids_match": true,
+      "max_abs_logit_diff": 0.0,
+      "compared_tokens": 32,
+      "generate_regular_match": true,
+      "generate_static_match": true
+    },
+    "The capital of France is": {
+      "tokenizer_ids_match": true,
+      "max_abs_logit_diff": 0.0,
+      "compared_tokens": 32,
+      "generate_regular_match": true,
+      "generate_static_match": true
+    },
+    "def fibonacci(n):\n": {
+      "tokenizer_ids_match": true,
+      "max_abs_logit_diff": 0.0,
+      "compared_tokens": 23,
+      "generate_regular_match": true,
+      "generate_static_match": true
+    }
+  },
+  "right_padding_max_abs_diff": 6.723403930664062e-05
+}

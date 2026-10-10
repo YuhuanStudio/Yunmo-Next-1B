@@ -1,0 +1,16 @@
+{
+  "conversations": 8,
+  "generated_tokens": 19040,
+  "single": {
+    "seconds": 301.53685307502747,
+    "tokens_per_second": 63.143193960648404
+  },
+  "batched": {
+    "8": {
+      "seconds": 81.61772060394287,
+      "tokens_per_second": 233.2826726734169,
+      "identical": 8,
+      "mismatched": []
+    }
+  }
+}
