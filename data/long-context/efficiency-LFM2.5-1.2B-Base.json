@@ -1,0 +1,52 @@
+{
+  "model": "LiquidAI/LFM2.5-1.2B-Base",
+  "revision": "7453bca97ca1e67754c4035a4b4c584e1c9dd725",
+  "dtype": "bfloat16",
+  "batch": 1,
+  "weights_bytes": 2340686848,
+  "decode_tokens": 64,
+  "prefill_chunk_tokens": 4096,
+  "device": "NVIDIA GeForce RTX 4070 Ti",
+  "rows": [
+    {
+      "context_tokens": 1024,
+      "prefill_seconds": 0.03734885199810378,
+      "prefill_tokens_per_second": 27417.174697952938,
+      "state_bytes_after_prefill": 21495808,
+      "decode_ms_per_token": 10.639618296863773,
+      "peak_allocated_bytes": 2429430784
+    },
+    {
+      "context_tokens": 4096,
+      "prefill_seconds": 0.15084870099963155,
+      "prefill_tokens_per_second": 27153.034615856617,
+      "state_bytes_after_prefill": 59269632,
+      "decode_ms_per_token": 10.576041156127758,
+      "peak_allocated_bytes": 2669342208
+    },
+    {
+      "context_tokens": 8192,
+      "prefill_seconds": 0.32405908599321265,
+      "prefill_tokens_per_second": 25279.34057115615,
+      "state_bytes_after_prefill": 109634048,
+      "decode_ms_per_token": 11.07538781252515,
+      "peak_allocated_bytes": 2753392128
+    },
+    {
+      "context_tokens": 16384,
+      "prefill_seconds": 0.7249549549887888,
+      "prefill_tokens_per_second": 22600.0248529281,
+      "state_bytes_after_prefill": 210362880,
+      "decode_ms_per_token": 11.248653156371802,
+      "peak_allocated_bytes": 2971561472
+    },
+    {
+      "context_tokens": 32768,
+      "prefill_seconds": 1.756590655000764,
+      "prefill_tokens_per_second": 18654.317616181186,
+      "state_bytes_after_prefill": 411820544,
+      "decode_ms_per_token": 11.899868468844943,
+      "peak_allocated_bytes": 3508563456
+    }
+  ]
+}

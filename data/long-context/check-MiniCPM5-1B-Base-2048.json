@@ -1,0 +1,82 @@
+{
+  "model": "openbmb/MiniCPM5-1B-Base",
+  "revision": "777abd79fbb0d0d60c7c7b6d69d3f2c904b2f987",
+  "dtype": "bfloat16",
+  "set": "out/evaluation/fresh-wiki-bpb-2611/fresh-long-tw.jsonl",
+  "documents": 5,
+  "byte_coverage": 1.0,
+  "max_chars": 12000,
+  "chunk_tokens": 2048,
+  "rows": [
+    {
+      "chars_from": 0,
+      "chars_to": 500,
+      "documents": 5,
+      "bytes": 6086,
+      "bits_per_byte": 1.153727820808969
+    },
+    {
+      "chars_from": 500,
+      "chars_to": 1000,
+      "documents": 5,
+      "bytes": 6292,
+      "bits_per_byte": 1.2256749029457537
+    },
+    {
+      "chars_from": 1000,
+      "chars_to": 2000,
+      "documents": 5,
+      "bytes": 11080,
+      "bits_per_byte": 0.7597874844129056
+    },
+    {
+      "chars_from": 2000,
+      "chars_to": 4000,
+      "documents": 5,
+      "bytes": 21824,
+      "bits_per_byte": 0.46615898667309086
+    },
+    {
+      "chars_from": 4000,
+      "chars_to": 8000,
+      "documents": 5,
+      "bytes": 44125,
+      "bits_per_byte": 0.34950874971736673
+    },
+    {
+      "chars_from": 8000,
+      "chars_to": 12000,
+      "documents": 5,
+      "bytes": 42117,
+      "bits_per_byte": 0.33740488234299504
+    },
+    {
+      "chars_from": 12000,
+      "chars_to": 16000,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    },
+    {
+      "chars_from": 16000,
+      "chars_to": 24000,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    },
+    {
+      "chars_from": 24000,
+      "chars_to": 32000,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    },
+    {
+      "chars_from": 32000,
+      "chars_to": null,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    }
+  ]
+}

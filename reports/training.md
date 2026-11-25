@@ -10,7 +10,10 @@ tokens. Context length went 8K → 32K → 16K. About 10.3B tokens were trained 
 about 9.4B on a rented RTX 5090. The 60-layer model trains at 16K context on the 12 GB card at 3,900
 tokens/s with 9.8 GB peak memory.
 
-![Held-out bits per byte across training](../figures/heldout_bpb_trajectory.png)
+![Held-out bits per byte across training](../figures/training_curve.png)
+
+*Figure 1. Held-out bits per byte (125 documents, 8K context) at the end of each stage, with the cumulative
+training tokens. The 32K stage raised short-context loss; the 60-layer stage recovered it.*
 
 ## 1. Route
 
@@ -167,7 +170,7 @@ work done. It is not reported for the 5090 because no peak-throughput denominato
 
 The extension and anneal both drew from one 16K pack of 206,155 rows (3.378B tokens). The extension used
 4.161B tokens, so it began a second pass over the pack at 17.78B cumulative tokens; training loss drops by
-about 0.1 nats at exactly that point (figure below). The anneal drew a further 1.2B tokens from the same
+about 0.1 nats at exactly that point (Figure 2). The anneal drew a further 1.2B tokens from the same
 pack before the released checkpoint. In total the released model saw that pack about 1.59 times.
 
 The training-loss drop is the model meeting data it has seen before; it is not evidence of better
@@ -176,9 +179,13 @@ generalization. Held-out BPB, which uses documents outside the training data, im
 
 ![Pretraining loss](../figures/pretraining_loss.png)
 
+*Figure 2. Training loss over the route (grey: logged windows; blue: rolling median). Hatched spans were
+trained but their loss logs were not kept. The released checkpoint is at 19.76B tokens; the run continued
+to 20.16B.*
+
 Training-loss levels also shift at every stage boundary because the data mixture and context length change,
-so they cannot be compared across stages. Logs for the first 1.2B tokens of K24, all of K48 8K, and the
-10.57–12.0B span of K60 were not exported and are left blank in the figure.
+so they cannot be compared across stages. Loss logs were not kept for the first 1.2B tokens of the 24-layer
+stage, the whole 48-layer 8K stage, and 10.57–12.0B of the first 60-layer stage.
 
 ## 7. Reliability
 
@@ -191,7 +198,36 @@ moved from the 5090 to the 4070 Ti.
 The route did hit faults, including a CUDA "device not ready" error during a KDA backward pass and an
 allocator memory-ceiling stop in the extension stage; each was resumed from the last checkpoint.
 
-## 8. Limitations
+## 8. Compute and cost
+
+Wall-clock time of each formal run as logged by Weights & Biases, including validation and checkpoint
+writes (exploratory runs excluded):
+
+| Stage | GPU | Hours | Tokens in stage |
+|---|---|---:|---:|
+| K24 | RTX 4070 Ti | 60.1 | 2.000B |
+| K36 | RTX 4070 Ti | 84.4 | 2.000B |
+| K48 8K | RTX 5090 (rented) | 48.9 | 2.500B |
+| K48 32K | RTX 5090 (rented) | 16.8 | 0.500B |
+| K60 16K | RTX 5090 (rented) | 127.6 | 5.000B |
+| K60 capability, first part | RTX 5090 (rented) | 37.2 | 1.427B |
+| K60 capability, rest | RTX 4070 Ti | 78.5 | 0.973B |
+| K60 extension | RTX 4070 Ti | 305.1 | 4.161B |
+| K60 anneal (to 20.16B; the released checkpoint is at 1.20B of 1.60B) | RTX 4070 Ti | 118.0 | 1.600B |
+| General-Instruct SFT 8K (superseded pilot) | RTX 4070 Ti | 4.6 | 0.056B packed |
+| General-Instruct SFT 16K (released) | RTX 4070 Ti | 132.7 | 1.756B packed |
+| **Total** | | **1,013.9** | |
+
+- **Rented GPU.** 230.5 hours on a cloud RTX 5090 billed hourly, about NT$2,800 (about NT$12 per hour)
+  for compute time alone; storage, transfers and idle setup time are not included. Everything else ran on one RTX 4070 Ti 12 GB.
+- **Training compute.** By the 6·N·D estimate with each stage's own parameter count, pretraining to the
+  released checkpoint used about 1.05×10²⁰ FLOPs and the SFT about 1.1×10¹⁹. For scale: LFM2.5-1.2B, one of
+  the comparison models, reports 28T pretraining tokens, about 2.0×10²³ FLOPs by the same estimate, roughly
+  1,900 times more. The other comparison models do not state their token counts.
+- **Exploratory runs.** Architecture, tokenizer and optimizer screens and dry runs between 2026-03 and
+  2026-09 add about 157 W&B-logged GPU-hours; many shorter screens were not logged to W&B.
+
+## 9. Limitations
 
 - One training run. No stage, growth step or optimizer setting was repeated with another seed at full
   scale; intervals in §1.1 are over held-out documents only.
@@ -201,4 +237,4 @@ allocator memory-ceiling stop in the extension stage; each was resumed from the 
   in held-out BPB cannot be attributed to one of them.
 - Optimizer evidence comes from 24-layer short runs.
 - About 1.59 passes over the final pack; the extension and anneal are not single-epoch.
-- Some per-step logs were not exported (§6).
+- Some per-step training-loss logs were not kept (§6).

@@ -87,7 +87,7 @@ At update 14,500 the run was stopped for a planned check before continuing:
   on 5 (a 30M-token diagnostic run of the same recipe: 0 of 8); all 8 prompts with effort `none` were
   answered directly.
 - **Retention.** Held-out pretraining BPB rose 0.76% at 8K and 0.18% at 16K against the base model;
-  code strata rose 1.6–2.5%, the largest drop, which suggests more code in replay next time.
+  code strata rose 1.6–2.5%, the largest regression.
 
 ## 3. Decoding
 
@@ -315,19 +315,7 @@ Held-out bits per byte on the 16-stratum pretraining evaluation set at 8K contex
 tied embedding (which is also the output projection) to 4 bits as well roughly triples the loss, so keep it
 at 8 bits or more.
 
-## 7. What would fix this
-
-In order of expected effect:
-
-1. **Pretraining tokens.** Knowledge and basic reasoning are pretraining properties, and the model is
-   about three orders of magnitude short of its comparison models.
-2. **Short reasoning for small models.** Mostly short traces, with long traces only as a minority (a
-   20:80 long:short mix gave 7–8 points in the cited study), and explicit truncated-reasoning examples.
-3. **Anti-repetition training.** Preference optimization against looping and non-terminating
-   generations, or unlikelihood-style penalties on repeated spans.
-4. **More code in replay**, given the 1.6–2.5% code BPB regression.
-
-## 8. Reproducibility
+## 7. Reproducibility
 
 - **Scripts.** Training: `trainer/train_sft.py`. Release export: `scripts/export_model.py` and
   `scripts/export_hf.py`. Chat benchmarks: `research/training/evaluation/chat_benchmarks.py` (items and

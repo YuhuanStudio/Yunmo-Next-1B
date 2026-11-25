@@ -1,0 +1,82 @@
+{
+  "model": "yuhuanstudio/Yunmo-Next-1B-Base",
+  "revision": "db13dbf8396f38e8183bcd3428d96a59633e985f",
+  "dtype": "bfloat16",
+  "set": "out/evaluation/fresh-wiki-bpb-2611/fresh-long-tw.jsonl",
+  "documents": 5,
+  "byte_coverage": 1.0,
+  "max_chars": 3500,
+  "chunk_tokens": 2048,
+  "rows": [
+    {
+      "chars_from": 0,
+      "chars_to": 500,
+      "documents": 5,
+      "bytes": 6075,
+      "bits_per_byte": 0.9763583796868739
+    },
+    {
+      "chars_from": 500,
+      "chars_to": 1000,
+      "documents": 5,
+      "bytes": 6309,
+      "bits_per_byte": 1.1500410949783384
+    },
+    {
+      "chars_from": 1000,
+      "chars_to": 2000,
+      "documents": 5,
+      "bytes": 11074,
+      "bits_per_byte": 0.7878098522697331
+    },
+    {
+      "chars_from": 2000,
+      "chars_to": 4000,
+      "documents": 5,
+      "bytes": 16499,
+      "bits_per_byte": 0.5103061100820871
+    },
+    {
+      "chars_from": 4000,
+      "chars_to": 8000,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    },
+    {
+      "chars_from": 8000,
+      "chars_to": 12000,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    },
+    {
+      "chars_from": 12000,
+      "chars_to": 16000,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    },
+    {
+      "chars_from": 16000,
+      "chars_to": 24000,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    },
+    {
+      "chars_from": 24000,
+      "chars_to": 32000,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    },
+    {
+      "chars_from": 32000,
+      "chars_to": null,
+      "documents": 0,
+      "bytes": 0,
+      "bits_per_byte": null
+    }
+  ]
+}

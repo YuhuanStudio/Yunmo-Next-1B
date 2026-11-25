@@ -1,0 +1,17 @@
+{
+  "of-parliament": {
+    "rows": 5984,
+    "blocks": 196,
+    "utf8_bytes": 1157274
+  },
+  "of-common-voice": {
+    "rows": 20613,
+    "blocks": 91,
+    "utf8_bytes": 503524
+  },
+  "of-tw-localization": {
+    "rows": 1998,
+    "blocks": 59,
+    "utf8_bytes": 303497
+  }
+}

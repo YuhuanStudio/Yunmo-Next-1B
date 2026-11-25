@@ -1,0 +1,62 @@
+{
+  "model": "yuhuanstudio/Yunmo-Next-1B-Base",
+  "revision": "db13dbf8396f38e8183bcd3428d96a59633e985f",
+  "dtype": "bfloat16",
+  "batch": 1,
+  "weights_bytes": 2019299840,
+  "decode_tokens": 64,
+  "prefill_chunk_tokens": 4096,
+  "device": "NVIDIA GeForce RTX 4070 Ti",
+  "rows": [
+    {
+      "context_tokens": 1024,
+      "prefill_seconds": 0.20591313199838623,
+      "prefill_tokens_per_second": 4972.970835138505,
+      "state_bytes_after_prefill": 49217536,
+      "decode_ms_per_token": 121.72924846868227,
+      "peak_allocated_bytes": 2182035968,
+      "static_decode_ms_per_token": 11.164123578055296,
+      "static_decode_peak_allocated_bytes": 2223508480
+    },
+    {
+      "context_tokens": 4096,
+      "prefill_seconds": 0.3938244259916246,
+      "prefill_tokens_per_second": 10400.573782813331,
+      "state_bytes_after_prefill": 104948224,
+      "decode_ms_per_token": 109.02572932809562,
+      "peak_allocated_bytes": 3878827520,
+      "static_decode_ms_per_token": 10.598545421999006,
+      "static_decode_peak_allocated_bytes": 3945393664
+    },
+    {
+      "context_tokens": 8192,
+      "prefill_seconds": 0.8605724560038652,
+      "prefill_tokens_per_second": 9519.244943116337,
+      "state_bytes_after_prefill": 162783744,
+      "decode_ms_per_token": 109.45601676576189,
+      "peak_allocated_bytes": 4662048256,
+      "static_decode_ms_per_token": 10.693872906358592,
+      "static_decode_peak_allocated_bytes": 4759003136
+    },
+    {
+      "context_tokens": 16384,
+      "prefill_seconds": 1.8112324179965071,
+      "prefill_tokens_per_second": 9045.77448879981,
+      "state_bytes_after_prefill": 209117696,
+      "decode_ms_per_token": 112.77632860924314,
+      "peak_allocated_bytes": 4711790080,
+      "static_decode_ms_per_token": 12.329205093692508,
+      "static_decode_peak_allocated_bytes": 4852696576
+    },
+    {
+      "context_tokens": 32768,
+      "prefill_seconds": 3.7638070760003757,
+      "prefill_tokens_per_second": 8706.078536528245,
+      "state_bytes_after_prefill": 303620608,
+      "decode_ms_per_token": 112.88122362498143,
+      "peak_allocated_bytes": 4803933696,
+      "static_decode_ms_per_token": 12.331339125012164,
+      "static_decode_peak_allocated_bytes": 5026235904
+    }
+  ]
+}

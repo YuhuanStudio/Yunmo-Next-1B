@@ -1,0 +1,30 @@
+{
+  "fresh-wiki-tw": {
+    "docs": 784,
+    "utf8_bytes": 2000633
+  },
+  "fresh-wiki-cn": {
+    "docs": 784,
+    "utf8_bytes": 2000585
+  },
+  "of-parliament": {
+    "docs": 5984,
+    "utf8_bytes": 1151486
+  },
+  "of-common-voice": {
+    "docs": 20613,
+    "utf8_bytes": 483002
+  },
+  "of-tw-localization": {
+    "docs": 1998,
+    "utf8_bytes": 301558
+  },
+  "of-fineweb-hant": {
+    "docs": 739,
+    "utf8_bytes": 2000553
+  },
+  "of-fineweb-hant-code": {
+    "docs": 334,
+    "utf8_bytes": 2014554
+  }
+}

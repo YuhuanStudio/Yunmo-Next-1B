@@ -147,10 +147,12 @@ acceptance check and served only as a comparison, never as a fallback.
 
 Selection had two layers: eligibility (round trip, no UNK, digit isolation, runtime parity, blind
 compression) and then downstream bits per byte. A preregistered gate also required a lexicon cost below 2.48
-on Pangolin, a public Traditional Chinese segmentation benchmark. The candidate scored 2.57 (control 2.62)
+on [PangolinBench](https://github.com/OpenFormosa/PangolinBench) (OpenFormosa's tokenizer benchmark, pinned at
+commit `a001cb0`; 30 examples, with a lexicon-cost submetric over 15 terms). The candidate scored 2.57 (control 2.62)
 and **failed** that gate. The project's priority order ranks downstream model quality above any external
 benchmark, so the gate hierarchy was reconciled to let the downstream comparison decide; the failure is
-kept on record as a failure. On Pangolin the candidate also uses slightly more tokens per character than
+kept on record as a failure. With 30 examples and 15 terms the benchmark is small, so the gap is weak
+evidence either way. On PangolinBench the candidate also uses slightly more tokens per character than
 the control (0.466 vs 0.446), while it uses fewer on the project's own blind set; the two corpora differ.
 
 ### 5.3 Downstream experiments
@@ -208,11 +210,15 @@ Thread configuration and run-to-run variance were not recorded, so treat this as
 
 ![Bytes per token by domain](../figures/tokenizer_compression.png)
 
+*Figure 1. UTF-8 bytes per token of Yunmo-Next (orange) and 17 other tokenizers (grey) on 12 domains; higher
+means fewer tokens for the same text. Yunmo-Next's rank is at the right.*
+
 | Tokenizer | Vocabulary | Trad. Chinese web | Trad. Wikipedia | Taiwan statutes | Classical Chinese | English (edu) | Math | Code |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | **Yunmo-Next** | 65,536 | **4.35** | **4.18** | **4.98** | **4.21** | **5.04** | **3.85** | 3.32 |
 | TAIDE (Llama 3.1) | 188,256 | 4.27 | 4.01 | 4.52 | 3.83 | 4.75 | 3.60 | 3.92 |
 | Qwen3.6 | 248,070 | 4.08 | 3.59 | 3.79 | 3.66 | 4.60 | 3.38 | 3.56 |
+| Pangolin (OpenFormosa) | 114,822 | 4.05 | 3.71 | 3.82 | 3.68 | 2.68 | 2.24 | 2.07 |
 | DeepSeek-V3 | 128,815 | 3.97 | 3.58 | 3.77 | 3.56 | 4.79 | 3.68 | 3.57 |
 | Breeze | 61,875 | 4.01 | 3.62 | 3.94 | 3.75 | 4.19 | 3.09 | 2.93 |
 | Gemma 3 | 262,145 | 3.72 | 3.42 | 3.48 | 3.43 | 4.66 | 3.38 | 3.22 |
@@ -222,12 +228,78 @@ Thread configuration and run-to-run variance were not recorded, so treat this as
 Values are UTF-8 bytes per token on about 2 MB per domain. Across all 18 tokenizers measured (several share
 a vocabulary: Gemma 3/4, Qwen3/Qwen2.5, Llama 3.1/Llama-3-Taiwan), Yunmo-Next ranks first on 9 of 12
 domains, second on Taiwan patents (behind TAIDE, 4.01 vs 3.93), third on general Simplified Chinese
-(behind Qwen3.6 and DeepSeek-V3) and ninth on code.
+(behind Qwen3.6 and DeepSeek-V3) and ninth on code. Against PangolinTokenizer, the other tokenizer built for
+Traditional Chinese and Taiwan text, Yunmo-Next encodes more bytes per token on all 12 domains with a
+vocabulary about 57% the size; the largest gaps are on Zhuyin (3.77 vs 1.86), court judgments (4.50 vs 2.93)
+and English (5.04 vs 2.68). Pangolin's vocabulary also covers transcription and OCR control formats that
+these domains do not exercise.
 
 **This comparison favors Yunmo-Next.** The domain samples come from the same source families as its
 training corpus (Traditional Chinese web, Wikipedia, statutes, court judgments, patents, Zhuyin), and the
 benchmark does not guarantee the sampled documents were excluded from that corpus. For Yunmo-Next these
 domains are in distribution; for the other tokenizers they are not. Section 6.1 is the held-out measurement.
+
+### 6.4 Out-of-distribution text, including OpenFormosa's corpora
+
+Section 6.3 uses samples from the source families of the Yunmo-Next corpus. This comparison uses text
+that no compared tokenizer was built from: Chinese Wikipedia pages created after 2026-10-01 (the
+Yunmo-Next tokenizer corpus was fixed in July 2026), and five corpora published by OpenFormosa, the
+group behind PangolinTokenizer: Legislative Yuan transcripts (word-separating spaces between CJK
+characters removed), Common Voice zh-TW sentences, the references of their Taiwan localization
+benchmark, and their Traditional Chinese translation of Ultra-FineWeb (prose and code). Each tokenizer is
+its repository's published `tokenizer.json`, encoded without special tokens. UTF-8 bytes per token,
+higher is better; best per column in bold:
+
+| Tokenizer | Vocabulary | New wiki (Trad.) | New wiki (Simp.) | Legislative Yuan | Common Voice | Localization refs | Web, translated | Code, translated |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Yunmo-Next** | 65,536 | 3.65 | 3.54 | **5.19** | **4.77** | **4.66** | **4.88** | 3.79 |
+| PangolinTokenizer (OpenFormosa) | 114,822 | 3.42 | 3.40 | 4.64 | 4.58 | 4.08 | 4.09 | 2.88 |
+| TAIDE (Llama 3.1) | 188,256 | **3.72** | 3.29 | 4.64 | 4.75 | 4.55 | 4.57 | **3.95** |
+| Qwen3.5 / 3.6 | 248,070 | 3.30 | 3.58 | 4.67 | 4.61 | 4.29 | 4.25 | 3.63 |
+| DeepSeek-V3 | 128,815 | 3.39 | **3.76** | 4.44 | 4.27 | 4.03 | 4.09 | 3.66 |
+| Breeze 7B | 61,875 | 3.17 | 2.64 | 4.36 | 3.88 | 4.14 | 4.16 | 3.29 |
+| Gemma 4 | 262,144 | 3.13 | 3.25 | 4.24 | 4.05 | 3.95 | 3.90 | 3.43 |
+| MiniCPM5 | 130,560 | 2.93 | 3.71 | 3.61 | 3.33 | 3.36 | 3.40 | 3.24 |
+| Llama 3.1 | 128,256 | 2.94 | 3.09 | 3.45 | 3.18 | 3.48 | 3.21 | 3.31 |
+| LFM2.5 | 64,400 | 2.48 | 2.90 | 2.81 | 2.65 | 2.86 | 2.75 | 2.79 |
+
+Sample sizes: 2.0 MB per column except Legislative Yuan (1.15 MB), Common Voice (0.48 MB, 20,613
+sentences) and localization references (0.30 MB, 1,998 items). Barbet 1B uses PangolinTokenizer;
+Qwen3.5 and Qwen3.6 give identical counts.
+
+- **Against PangolinTokenizer**, Yunmo-Next needs fewer tokens on all seven columns: 7.0% more bytes per
+  token on new Traditional Chinese Wikipedia, 11.9% on Legislative Yuan transcripts, 4.2% on Common Voice,
+  14.3% on the localization references, 19.4% on translated web text and 31.4% on translated code, with
+  57% of the vocabulary. Five of the seven columns are OpenFormosa's own corpora.
+- **Against all tokenizers** it is best on four columns. TAIDE (188K vocabulary) is ahead on new
+  Traditional Chinese Wikipedia (3.72 vs 3.65) and code; DeepSeek-V3, MiniCPM5 and Qwen are ahead on
+  Simplified Chinese, which Yunmo-Next was not built for.
+- **Round trip.** Every tokenizer decoded every document back exactly, except Breeze and Qwen on 0.3% of
+  the code documents.
+- **Encoding speed** (single thread, published `tokenizers` files): Yunmo-Next 4.5 MB/s, PangolinTokenizer
+  2.8 MB/s. Measured once while other jobs were running; treat as indicative.
+
+**PangolinBench.** OpenFormosa's own tokenizer benchmark ([commit `a001cb0`](https://github.com/OpenFormosa/PangolinBench),
+its built-in 30-example suite):
+
+| Tokenizer | Vocabulary | Tokens (30 examples) | Bytes per token | Lexicon tokens per term (15 terms) | Passes the benchmark's gate |
+|---|---:|---:|---:|---:|---|
+| **Yunmo-Next** | 65,536 | **755** | **3.49** | 2.57 | yes |
+| PangolinTokenizer | 114,822 | 786 | 3.35 | 2.48 | yes |
+| TAIDE (Llama 3.1) | 188,256 | 781 | 3.37 | **1.94** | no |
+| DeepSeek-V3 | 128,815 | 846 | 3.11 | 3.00 | no |
+| Gemma 4 | 262,144 | 852 | 3.09 | 2.92 | no |
+| Qwen3.6 | 248,070 | 876 | 3.01 | 2.59 | no |
+| Llama 3.1 | 128,256 | 897 | 2.94 | 3.47 | no |
+| Breeze 7B | 61,875 | 899 | 2.93 | 3.05 | no |
+| MiniCPM5 | 130,560 | 927 | 2.84 | 3.45 | no |
+| LFM2.5 | 64,400 | 1,054 | 2.50 | 3.98 | no |
+
+Yunmo-Next encodes the suite in the fewest tokens. PangolinTokenizer and TAIDE split the 15 Taiwan-specific
+terms into fewer pieces; PangolinTokenizer does better on the Hakka romanization term (3 tokens vs 5) and two
+policy terms, Yunmo-Next on the Zhuyin term (3 vs 6). With one to three terms per category these differences
+are small samples. The other tokenizers fail the gate only because they lack the benchmark's ten required
+rich-transcription structural tokens, which Yunmo-Next reserves among its protocol IDs.
 
 ## 7. Limitations
 

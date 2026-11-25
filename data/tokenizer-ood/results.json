@@ -1,0 +1,674 @@
+{
+  "Yunmo-Next": {
+    "repo": "yuhuanstudio/Yunmo-Next-Tokenizer",
+    "revision": "a0a0529f34909905cda9402bfb4fecc7a3c38f27",
+    "vocab_size": 65536,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.654584778720971,
+        "tokens": 547431,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 4.467496399214434
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.5435803785562716,
+        "tokens": 564566,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 4.69105273745491
+      },
+      "of-parliament": {
+        "bytes_per_token": 5.1860095389507155,
+        "tokens": 222037,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 4.526661800004848
+      },
+      "of-common-voice": {
+        "bytes_per_token": 4.770719951008958,
+        "tokens": 101243,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.150596965525683
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 4.664470224284609,
+        "tokens": 64650,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 4.672082937136318
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 4.880968994895918,
+        "tokens": 409868,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 5.469287796344215
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.787218363145873,
+        "tokens": 531935,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 4.3579070396913995
+      }
+    }
+  },
+  "PangolinTokenizer (OpenFormosa)": {
+    "repo": "OpenFormosa/PangolinTokenizer",
+    "revision": "8953d03ff0ccd7f55c2cf2385545473073378d43",
+    "vocab_size": 114822,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.4160198203059102,
+        "tokens": 585662,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.646164652680944
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.4010366728547434,
+        "tokens": 588228,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.7561070892103996
+      },
+      "of-parliament": {
+        "bytes_per_token": 4.635966519178198,
+        "tokens": 248381,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.057308266183069
+      },
+      "of-common-voice": {
+        "bytes_per_token": 4.578825626149442,
+        "tokens": 105486,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.376375306140281
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 4.081506144767474,
+        "tokens": 73884,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.033105526379255
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 4.087015056487364,
+        "tokens": 489490,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.2235983721248513
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 2.8821380899855362,
+        "tokens": 698979,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.404970123078904
+      }
+    }
+  },
+  "Barbet 1B (OpenFormosa)": {
+    "repo": "OpenFormosa/barbet-1b-structured-sft",
+    "revision": "25f6d3f1b6e0ce24e14c6f57ea12fc5d461df521",
+    "vocab_size": 114822,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.4160198203059102,
+        "tokens": 585662,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.679464949488762
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.4010366728547434,
+        "tokens": 588228,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.7906833669379223
+      },
+      "of-parliament": {
+        "bytes_per_token": 4.635966519178198,
+        "tokens": 248381,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.0087370920300978
+      },
+      "of-common-voice": {
+        "bytes_per_token": 4.578825626149442,
+        "tokens": 105486,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.576855242990715
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 4.081506144767474,
+        "tokens": 73884,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.203513885810905
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 4.087015056487364,
+        "tokens": 489490,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.9388207840731164
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 2.8821380899855362,
+        "tokens": 698979,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.316789079015727
+      }
+    }
+  },
+  "Breeze 7B": {
+    "repo": "MediaTek-Research/Breeze-7B-Instruct-v1_0",
+    "revision": "60d4fa07ae4ddd4174864b257be0563f1806cd6d",
+    "vocab_size": 61875,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.168240520060494,
+        "tokens": 631465,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 6.883661684811397
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 2.644586857867262,
+        "tokens": 756483,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 6.591239383184122
+      },
+      "of-parliament": {
+        "bytes_per_token": 4.360384581886481,
+        "tokens": 264079,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 7.502767815445704
+      },
+      "of-common-voice": {
+        "bytes_per_token": 3.884838735622939,
+        "tokens": 124330,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 4.143810315786121
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 4.142507830100555,
+        "tokens": 72796,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 7.6898625921011385
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 4.1645565140639835,
+        "tokens": 480376,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 9.152478763662854
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.287961926274592,
+        "tokens": 612706,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 0.9970059880239521,
+        "encode_mb_per_s": 6.459001199775686
+      }
+    }
+  },
+  "TAIDE (Llama 3.1)": {
+    "repo": "taide/Llama-3.1-TAIDE-LX-8B-Chat",
+    "revision": "6738923786667dfe00363b1e2d225536817b429e",
+    "vocab_size": 188256,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.715692720289435,
+        "tokens": 538428,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.803223711820856
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.290002960136824,
+        "tokens": 608080,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.430818202069326
+      },
+      "of-parliament": {
+        "bytes_per_token": 4.644099924983665,
+        "tokens": 247946,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.8967155452480005
+      },
+      "of-common-voice": {
+        "bytes_per_token": 4.745455974533807,
+        "tokens": 101782,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.813964076354096
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 4.548180323665596,
+        "tokens": 66303,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.309308642362217
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 4.568390452876377,
+        "tokens": 437912,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.217661677691002
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.9459278411094134,
+        "tokens": 510540,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.76337060532485
+      }
+    }
+  },
+  "Llama 3.1": {
+    "repo": "meta-llama/Llama-3.1-8B",
+    "revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+    "vocab_size": 128256,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 2.9434622112825464,
+        "tokens": 679687,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.4790698965961373
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.0879944555836993,
+        "tokens": 647859,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.4884556110238125
+      },
+      "of-parliament": {
+        "bytes_per_token": 3.4520795172126406,
+        "tokens": 333563,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.49373139446097
+      },
+      "of-common-voice": {
+        "bytes_per_token": 3.177080387036513,
+        "tokens": 152027,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.5249513034052096
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 3.480747033565723,
+        "tokens": 86636,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.704047674186365
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 3.2068315484233962,
+        "tokens": 623841,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.6008505219424998
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.3067975890324615,
+        "tokens": 609216,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.988968859583189
+      }
+    }
+  },
+  "Qwen3.6": {
+    "repo": "Qwen/Qwen3.6-27B",
+    "revision": "1cda14dd71a3f47115850eb790f416f165da1cb5",
+    "vocab_size": 248070,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.303336965854303,
+        "tokens": 605640,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.6468512060041025
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.5799271339968577,
+        "tokens": 558834,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.489091018961541
+      },
+      "of-parliament": {
+        "bytes_per_token": 4.670888027129204,
+        "tokens": 246524,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.6062131927304484
+      },
+      "of-common-voice": {
+        "bytes_per_token": 4.606599904625655,
+        "tokens": 104850,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.0460115854895147
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 4.286173176417079,
+        "tokens": 70356,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.9685392797982977
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 4.252713544124587,
+        "tokens": 470418,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.9586661318158023
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.629303884124811,
+        "tokens": 555080,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 0.9970059880239521,
+        "encode_mb_per_s": 2.5705168320997296
+      }
+    }
+  },
+  "Qwen3.5": {
+    "repo": "Qwen/Qwen3.5-0.8B-Base",
+    "revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+    "vocab_size": 248066,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.303336965854303,
+        "tokens": 605640,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.8059304520381474
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.5799271339968577,
+        "tokens": 558834,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.711705533516478
+      },
+      "of-parliament": {
+        "bytes_per_token": 4.670888027129204,
+        "tokens": 246524,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.011979868568052
+      },
+      "of-common-voice": {
+        "bytes_per_token": 4.606599904625655,
+        "tokens": 104850,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.258956781510893
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 4.286173176417079,
+        "tokens": 70356,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.8839591884750013
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 4.252713544124587,
+        "tokens": 470418,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.977666184131064
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.629303884124811,
+        "tokens": 555080,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 0.9970059880239521,
+        "encode_mb_per_s": 2.548730109811405
+      }
+    }
+  },
+  "Gemma 4": {
+    "repo": "google/gemma-4-12B-it",
+    "revision": "43c9d014b231474fa7212dbb48a762566c2b255d",
+    "vocab_size": 262144,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.128937107931379,
+        "tokens": 639397,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 5.147405499431103
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.2545395685091734,
+        "tokens": 614706,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 5.346675209787076
+      },
+      "of-parliament": {
+        "bytes_per_token": 4.242106969444669,
+        "tokens": 271442,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 6.6596794800383075
+      },
+      "of-common-voice": {
+        "bytes_per_token": 4.047514099201394,
+        "tokens": 119333,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 4.418314193277514
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 3.947507592418054,
+        "tokens": 76392,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 6.472572207526586
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 3.897601299880377,
+        "tokens": 513278,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 6.47181292328118
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.425751026252334,
+        "tokens": 588062,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 4.963024279937447
+      }
+    }
+  },
+  "DeepSeek-V3": {
+    "repo": "deepseek-ai/DeepSeek-V3",
+    "revision": "e815299b0bcbac849fa540c768ef21845365c9eb",
+    "vocab_size": 128815,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 3.3904781434193,
+        "tokens": 590074,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.6281482697853753
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.7630940893435887,
+        "tokens": 531633,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.309881970149759
+      },
+      "of-parliament": {
+        "bytes_per_token": 4.4441759938247785,
+        "tokens": 259100,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.7377810602708843
+      },
+      "of-common-voice": {
+        "bytes_per_token": 4.271670012646921,
+        "tokens": 113071,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.6093937331571513
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 4.026410307764203,
+        "tokens": 74895,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.202213011903014
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 4.093512961595047,
+        "tokens": 488713,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.268076761495798
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.6629586530419287,
+        "tokens": 549980,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.4801723171382846
+      }
+    }
+  },
+  "MiniCPM5": {
+    "repo": "openbmb/MiniCPM5-1B-Base",
+    "revision": "777abd79fbb0d0d60c7c7b6d69d3f2c904b2f987",
+    "vocab_size": 130560,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 2.9254281106105338,
+        "tokens": 683877,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.845505698439471
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 3.711371284612331,
+        "tokens": 539042,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.1017695731223633
+      },
+      "of-parliament": {
+        "bytes_per_token": 3.610737960402125,
+        "tokens": 318906,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.280522508491107
+      },
+      "of-common-voice": {
+        "bytes_per_token": 3.3333931455230577,
+        "tokens": 144898,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.5238820171287943
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 3.358032115097659,
+        "tokens": 89802,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.571661433488238
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 3.400016995385753,
+        "tokens": 588395,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.577586802358671
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 3.243912493196742,
+        "tokens": 621026,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.718607651153289
+      }
+    }
+  },
+  "LFM2.5": {
+    "repo": "LiquidAI/LFM2.5-1.2B-Base",
+    "revision": "7453bca97ca1e67754c4035a4b4c584e1c9dd725",
+    "vocab_size": 64400,
+    "domains": {
+      "fresh-wiki-tw": {
+        "bytes_per_token": 2.4847120571004884,
+        "tokens": 805177,
+        "utf8_bytes": 2000633,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.4845269655616367
+      },
+      "fresh-wiki-cn": {
+        "bytes_per_token": 2.8986339835000043,
+        "tokens": 690182,
+        "utf8_bytes": 2000585,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.5566309385004597
+      },
+      "of-parliament": {
+        "bytes_per_token": 2.8115883286534,
+        "tokens": 409550,
+        "utf8_bytes": 1151486,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.7552105688403654
+      },
+      "of-common-voice": {
+        "bytes_per_token": 2.653900888476184,
+        "tokens": 181997,
+        "utf8_bytes": 483002,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.6410324633573743
+      },
+      "of-tw-localization": {
+        "bytes_per_token": 2.8593453690358794,
+        "tokens": 105464,
+        "utf8_bytes": 301558,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.55312554112209
+      },
+      "of-fineweb-hant": {
+        "bytes_per_token": 2.7543723900930583,
+        "tokens": 726319,
+        "utf8_bytes": 2000553,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 3.932718100835858
+      },
+      "of-fineweb-hant-code": {
+        "bytes_per_token": 2.793886206102699,
+        "tokens": 721058,
+        "utf8_bytes": 2014554,
+        "roundtrip_exact": 1.0,
+        "encode_mb_per_s": 2.8948807730147474
+      }
+    }
+  }
+}

@@ -1,0 +1,1054 @@
+{
+  "baseline_comparison": null,
+  "baseline_tokenizer_name": null,
+  "benchmark": "PangolinBench",
+  "benchmark_version": "0.1.0",
+  "config": {
+    "pangolinbench": {
+      "comparative_quality_gates": {
+        "enabled": false,
+        "max_rich_transcription_token_regression": 0.02,
+        "max_taiwan_lexicon_cost_regression": 0.02,
+        "max_traditional_zh_token_regression": 0.02
+      },
+      "external_manifest": null,
+      "name": "PangolinBench",
+      "performance": {
+        "enabled": false,
+        "measured_rounds": 5,
+        "warmup_rounds": 2
+      },
+      "quality_gates": {
+        "fail_on_nan_metrics": true,
+        "max_dense_timestamp_tokens": 0,
+        "max_roundtrip_failure_rate": 0.0,
+        "require_no_dense_timestamp_tokens": true,
+        "require_required_json_fields": true,
+        "require_rich_transcription_json_parse": true,
+        "require_rich_transcription_tokens": true,
+        "require_roundtrip_ok": true,
+        "require_timestamp_precision": true
+      },
+      "report": {
+        "include_example_text": false,
+        "max_examples_per_subset": 20
+      },
+      "rich_transcription": {
+        "no_dense_timestamp_tokens": true,
+        "require_structural_tokens": true,
+        "timestamp_precision_digits": 2
+      },
+      "subsets": {
+        "bopomofo": {
+          "enabled": true,
+          "weight": 1.0
+        },
+        "hakka_romanized": {
+          "enabled": true,
+          "weight": 1.0
+        },
+        "rich_transcription_json": {
+          "enabled": true,
+          "weight": 1.0
+        },
+        "rich_transcription_structured_text": {
+          "enabled": true,
+          "weight": 0.5
+        },
+        "taigi_han_roman_mixed": {
+          "enabled": true,
+          "weight": 1.0
+        },
+        "taiwan_code_switching": {
+          "enabled": true,
+          "weight": 1.0
+        },
+        "taiwan_mandarin_colloquial": {
+          "enabled": true,
+          "weight": 1.0
+        },
+        "taiwan_named_entities": {
+          "enabled": true,
+          "weight": 1.0
+        },
+        "traditional_zh_formal": {
+          "enabled": true,
+          "weight": 1.0
+        },
+        "unicode_edge_cases": {
+          "enabled": true,
+          "weight": 0.5
+        }
+      },
+      "use_builtin_fixtures": true,
+      "version": "0.1.0"
+    }
+  },
+  "examples": [
+    {
+      "char_count": 15,
+      "encode_decode_exact_match": true,
+      "id": "tw_formal_001",
+      "subset": "traditional_zh_formal",
+      "token_count": 9,
+      "tokens_per_char": 0.6,
+      "tokens_per_utf8_byte": 0.2,
+      "utf8_byte_count": 45
+    },
+    {
+      "char_count": 21,
+      "encode_decode_exact_match": true,
+      "id": "tw_formal_002",
+      "subset": "traditional_zh_formal",
+      "token_count": 14,
+      "tokens_per_char": 0.6666666666666666,
+      "tokens_per_utf8_byte": 0.2222222222222222,
+      "utf8_byte_count": 63
+    },
+    {
+      "char_count": 22,
+      "encode_decode_exact_match": true,
+      "id": "tw_formal_003",
+      "subset": "traditional_zh_formal",
+      "token_count": 15,
+      "tokens_per_char": 0.6818181818181818,
+      "tokens_per_utf8_byte": 0.22727272727272727,
+      "utf8_byte_count": 66
+    },
+    {
+      "char_count": 23,
+      "encode_decode_exact_match": true,
+      "id": "tw_formal_004",
+      "subset": "traditional_zh_formal",
+      "token_count": 14,
+      "tokens_per_char": 0.6086956521739131,
+      "tokens_per_utf8_byte": 0.2028985507246377,
+      "utf8_byte_count": 69
+    },
+    {
+      "char_count": 21,
+      "encode_decode_exact_match": true,
+      "id": "tw_formal_005",
+      "subset": "traditional_zh_formal",
+      "token_count": 13,
+      "tokens_per_char": 0.6190476190476191,
+      "tokens_per_utf8_byte": 0.20634920634920634,
+      "utf8_byte_count": 63
+    },
+    {
+      "char_count": 16,
+      "encode_decode_exact_match": true,
+      "id": "tw_colloquial_001",
+      "subset": "taiwan_mandarin_colloquial",
+      "token_count": 14,
+      "tokens_per_char": 0.875,
+      "tokens_per_utf8_byte": 0.2916666666666667,
+      "utf8_byte_count": 48
+    },
+    {
+      "char_count": 15,
+      "encode_decode_exact_match": true,
+      "id": "tw_colloquial_002",
+      "subset": "taiwan_mandarin_colloquial",
+      "token_count": 13,
+      "tokens_per_char": 0.8666666666666667,
+      "tokens_per_utf8_byte": 0.28888888888888886,
+      "utf8_byte_count": 45
+    },
+    {
+      "char_count": 17,
+      "encode_decode_exact_match": true,
+      "id": "tw_colloquial_003",
+      "subset": "taiwan_mandarin_colloquial",
+      "token_count": 15,
+      "tokens_per_char": 0.8823529411764706,
+      "tokens_per_utf8_byte": 0.29411764705882354,
+      "utf8_byte_count": 51
+    },
+    {
+      "char_count": 35,
+      "encode_decode_exact_match": true,
+      "id": "tw_entities_001",
+      "subset": "taiwan_named_entities",
+      "token_count": 25,
+      "tokens_per_char": 0.7142857142857143,
+      "tokens_per_utf8_byte": 0.23809523809523808,
+      "utf8_byte_count": 105
+    },
+    {
+      "char_count": 26,
+      "encode_decode_exact_match": true,
+      "id": "tw_entities_002",
+      "subset": "taiwan_named_entities",
+      "token_count": 18,
+      "tokens_per_char": 0.6923076923076923,
+      "tokens_per_utf8_byte": 0.23076923076923078,
+      "utf8_byte_count": 78
+    },
+    {
+      "char_count": 30,
+      "encode_decode_exact_match": true,
+      "id": "tw_entities_003",
+      "subset": "taiwan_named_entities",
+      "token_count": 21,
+      "tokens_per_char": 0.7,
+      "tokens_per_utf8_byte": 0.23333333333333334,
+      "utf8_byte_count": 90
+    },
+    {
+      "char_count": 20,
+      "encode_decode_exact_match": true,
+      "id": "tw_entities_004",
+      "subset": "taiwan_named_entities",
+      "token_count": 15,
+      "tokens_per_char": 0.75,
+      "tokens_per_utf8_byte": 0.25,
+      "utf8_byte_count": 60
+    },
+    {
+      "char_count": 28,
+      "encode_decode_exact_match": true,
+      "id": "taigi_mix_001",
+      "subset": "taigi_han_roman_mixed",
+      "token_count": 17,
+      "tokens_per_char": 0.6071428571428571,
+      "tokens_per_utf8_byte": 0.3695652173913043,
+      "utf8_byte_count": 46
+    },
+    {
+      "char_count": 31,
+      "encode_decode_exact_match": true,
+      "id": "taigi_mix_002",
+      "subset": "taigi_han_roman_mixed",
+      "token_count": 21,
+      "tokens_per_char": 0.6774193548387096,
+      "tokens_per_utf8_byte": 0.375,
+      "utf8_byte_count": 56
+    },
+    {
+      "char_count": 32,
+      "encode_decode_exact_match": true,
+      "id": "taigi_mix_003",
+      "subset": "taigi_han_roman_mixed",
+      "token_count": 19,
+      "tokens_per_char": 0.59375,
+      "tokens_per_utf8_byte": 0.2835820895522388,
+      "utf8_byte_count": 67
+    },
+    {
+      "char_count": 46,
+      "encode_decode_exact_match": true,
+      "id": "hakka_roman_001",
+      "subset": "hakka_romanized",
+      "token_count": 18,
+      "tokens_per_char": 0.391304347826087,
+      "tokens_per_utf8_byte": 0.33962264150943394,
+      "utf8_byte_count": 53
+    },
+    {
+      "char_count": 20,
+      "encode_decode_exact_match": true,
+      "id": "hakka_roman_002",
+      "subset": "hakka_romanized",
+      "token_count": 19,
+      "tokens_per_char": 0.95,
+      "tokens_per_utf8_byte": 0.31666666666666665,
+      "utf8_byte_count": 60
+    },
+    {
+      "char_count": 61,
+      "encode_decode_exact_match": true,
+      "id": "hakka_roman_003",
+      "subset": "hakka_romanized",
+      "token_count": 29,
+      "tokens_per_char": 0.47540983606557374,
+      "tokens_per_utf8_byte": 0.3717948717948718,
+      "utf8_byte_count": 78
+    },
+    {
+      "char_count": 11,
+      "encode_decode_exact_match": true,
+      "id": "bopomofo_001",
+      "subset": "bopomofo",
+      "token_count": 9,
+      "tokens_per_char": 0.8181818181818182,
+      "tokens_per_utf8_byte": 0.2903225806451613,
+      "utf8_byte_count": 31
+    },
+    {
+      "char_count": 18,
+      "encode_decode_exact_match": true,
+      "id": "bopomofo_002",
+      "subset": "bopomofo",
+      "token_count": 17,
+      "tokens_per_char": 0.9444444444444444,
+      "tokens_per_utf8_byte": 0.3695652173913043,
+      "utf8_byte_count": 46
+    },
+    {
+      "char_count": 15,
+      "encode_decode_exact_match": true,
+      "id": "bopomofo_003",
+      "subset": "bopomofo",
+      "token_count": 12,
+      "tokens_per_char": 0.8,
+      "tokens_per_utf8_byte": 0.2926829268292683,
+      "utf8_byte_count": 41
+    },
+    {
+      "char_count": 28,
+      "encode_decode_exact_match": true,
+      "id": "tw_code_001",
+      "subset": "taiwan_code_switching",
+      "token_count": 12,
+      "tokens_per_char": 0.42857142857142855,
+      "tokens_per_utf8_byte": 0.2608695652173913,
+      "utf8_byte_count": 46
+    },
+    {
+      "char_count": 28,
+      "encode_decode_exact_match": true,
+      "id": "tw_code_002",
+      "subset": "taiwan_code_switching",
+      "token_count": 16,
+      "tokens_per_char": 0.5714285714285714,
+      "tokens_per_utf8_byte": 0.3076923076923077,
+      "utf8_byte_count": 52
+    },
+    {
+      "char_count": 36,
+      "encode_decode_exact_match": true,
+      "id": "tw_code_003",
+      "subset": "taiwan_code_switching",
+      "token_count": 13,
+      "tokens_per_char": 0.3611111111111111,
+      "tokens_per_utf8_byte": 0.25,
+      "utf8_byte_count": 52
+    },
+    {
+      "char_count": 356,
+      "encode_decode_exact_match": true,
+      "id": "rich_json_001",
+      "subset": "rich_transcription_json",
+      "token_count": 175,
+      "tokens_per_char": 0.49157303370786515,
+      "tokens_per_utf8_byte": 0.38802660753880264,
+      "utf8_byte_count": 451
+    },
+    {
+      "char_count": 266,
+      "encode_decode_exact_match": true,
+      "id": "rich_json_002",
+      "subset": "rich_transcription_json",
+      "token_count": 113,
+      "tokens_per_char": 0.424812030075188,
+      "tokens_per_utf8_byte": 0.424812030075188,
+      "utf8_byte_count": 266
+    },
+    {
+      "char_count": 244,
+      "encode_decode_exact_match": true,
+      "id": "rich_text_001",
+      "subset": "rich_transcription_structured_text",
+      "token_count": 128,
+      "tokens_per_char": 0.5245901639344263,
+      "tokens_per_utf8_byte": 0.43537414965986393,
+      "utf8_byte_count": 294
+    },
+    {
+      "char_count": 26,
+      "encode_decode_exact_match": true,
+      "id": "unicode_edge_001",
+      "subset": "unicode_edge_cases",
+      "token_count": 28,
+      "tokens_per_char": 1.0769230769230769,
+      "tokens_per_utf8_byte": 0.42424242424242425,
+      "utf8_byte_count": 66
+    },
+    {
+      "char_count": 51,
+      "encode_decode_exact_match": true,
+      "id": "unicode_edge_002",
+      "subset": "unicode_edge_cases",
+      "token_count": 31,
+      "tokens_per_char": 0.6078431372549019,
+      "tokens_per_utf8_byte": 0.47692307692307695,
+      "utf8_byte_count": 65
+    },
+    {
+      "char_count": 62,
+      "encode_decode_exact_match": true,
+      "id": "unicode_edge_003",
+      "subset": "unicode_edge_cases",
+      "token_count": 36,
+      "tokens_per_char": 0.5806451612903226,
+      "tokens_per_utf8_byte": 0.45,
+      "utf8_byte_count": 80
+    }
+  ],
+  "lexicon_metrics": {
+    "summary": {
+      "category_breakdown": {
+        "bopomofo": {
+          "mean_term_token_count": 4.0,
+          "num_terms": 1,
+          "overseg_rate_2": 1.0,
+          "overseg_rate_3": 1.0,
+          "overseg_rate_4": 0.0,
+          "weighted_mean_term_token_count": 4.0
+        },
+        "hakka_romanization": {
+          "mean_term_token_count": 5.0,
+          "num_terms": 1,
+          "overseg_rate_2": 1.0,
+          "overseg_rate_3": 1.0,
+          "overseg_rate_4": 1.0,
+          "weighted_mean_term_token_count": 5.0
+        },
+        "health_policy": {
+          "mean_term_token_count": 2.0,
+          "num_terms": 1,
+          "overseg_rate_2": 0.0,
+          "overseg_rate_3": 0.0,
+          "overseg_rate_4": 0.0,
+          "weighted_mean_term_token_count": 2.0
+        },
+        "industry": {
+          "mean_term_token_count": 3.3333333333333335,
+          "num_terms": 3,
+          "overseg_rate_2": 1.0,
+          "overseg_rate_3": 0.3333333333333333,
+          "overseg_rate_4": 0.0,
+          "weighted_mean_term_token_count": 3.3333333333333335
+        },
+        "institution": {
+          "mean_term_token_count": 4.0,
+          "num_terms": 1,
+          "overseg_rate_2": 1.0,
+          "overseg_rate_3": 1.0,
+          "overseg_rate_4": 0.0,
+          "weighted_mean_term_token_count": 4.0
+        },
+        "labor_policy": {
+          "mean_term_token_count": 2.5,
+          "num_terms": 2,
+          "overseg_rate_2": 0.5,
+          "overseg_rate_3": 0.0,
+          "overseg_rate_4": 0.0,
+          "weighted_mean_term_token_count": 2.5
+        },
+        "local_governance": {
+          "mean_term_token_count": 2.0,
+          "num_terms": 1,
+          "overseg_rate_2": 0.0,
+          "overseg_rate_3": 0.0,
+          "overseg_rate_4": 0.0,
+          "weighted_mean_term_token_count": 2.0
+        },
+        "place": {
+          "mean_term_token_count": 2.0,
+          "num_terms": 2,
+          "overseg_rate_2": 0.0,
+          "overseg_rate_3": 0.0,
+          "overseg_rate_4": 0.0,
+          "weighted_mean_term_token_count": 2.0
+        },
+        "taigi_romanization": {
+          "mean_term_token_count": 5.0,
+          "num_terms": 2,
+          "overseg_rate_2": 1.0,
+          "overseg_rate_3": 1.0,
+          "overseg_rate_4": 0.5,
+          "weighted_mean_term_token_count": 5.0
+        },
+        "transport": {
+          "mean_term_token_count": 2.0,
+          "num_terms": 1,
+          "overseg_rate_2": 0.0,
+          "overseg_rate_3": 0.0,
+          "overseg_rate_4": 0.0,
+          "weighted_mean_term_token_count": 2.0
+        }
+      },
+      "mean_term_token_count": 3.2,
+      "num_terms": 15,
+      "overseg_rate_2": 0.6,
+      "overseg_rate_3": 0.4,
+      "overseg_rate_4": 0.13333333333333333,
+      "p50_term_token_count": 3.0,
+      "p90_term_token_count": 4.6,
+      "p95_term_token_count": 5.299999999999999,
+      "p99_term_token_count": 5.859999999999999,
+      "weighted_mean_term_token_count": 3.046511627906977
+    },
+    "terms": [
+      {
+        "category": "health_policy",
+        "char_count": 2,
+        "oversegmented_2": false,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "健保",
+        "token_count": 2,
+        "tokens_per_char": 1.0,
+        "tokens_per_utf8_byte": 0.3333333333333333,
+        "utf8_byte_count": 6,
+        "weight": 10.0
+      },
+      {
+        "category": "labor_policy",
+        "char_count": 2,
+        "oversegmented_2": false,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "勞保",
+        "token_count": 2,
+        "tokens_per_char": 1.0,
+        "tokens_per_utf8_byte": 0.3333333333333333,
+        "utf8_byte_count": 6,
+        "weight": 8.0
+      },
+      {
+        "category": "labor_policy",
+        "char_count": 4,
+        "oversegmented_2": true,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "勞保年金",
+        "token_count": 3,
+        "tokens_per_char": 0.75,
+        "tokens_per_utf8_byte": 0.25,
+        "utf8_byte_count": 12,
+        "weight": 8.0
+      },
+      {
+        "category": "institution",
+        "char_count": 5,
+        "oversegmented_2": true,
+        "oversegmented_3": true,
+        "oversegmented_4": false,
+        "term": "戶政事務所",
+        "token_count": 4,
+        "tokens_per_char": 0.8,
+        "tokens_per_utf8_byte": 0.26666666666666666,
+        "utf8_byte_count": 15,
+        "weight": 7.0
+      },
+      {
+        "category": "local_governance",
+        "char_count": 2,
+        "oversegmented_2": false,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "里長",
+        "token_count": 2,
+        "tokens_per_char": 1.0,
+        "tokens_per_utf8_byte": 0.3333333333333333,
+        "utf8_byte_count": 6,
+        "weight": 5.0
+      },
+      {
+        "category": "transport",
+        "char_count": 2,
+        "oversegmented_2": false,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "捷運",
+        "token_count": 2,
+        "tokens_per_char": 1.0,
+        "tokens_per_utf8_byte": 0.3333333333333333,
+        "utf8_byte_count": 6,
+        "weight": 6.0
+      },
+      {
+        "category": "industry",
+        "char_count": 4,
+        "oversegmented_2": true,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "科學園區",
+        "token_count": 3,
+        "tokens_per_char": 0.75,
+        "tokens_per_utf8_byte": 0.25,
+        "utf8_byte_count": 12,
+        "weight": 6.0
+      },
+      {
+        "category": "industry",
+        "char_count": 4,
+        "oversegmented_2": true,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "晶圓代工",
+        "token_count": 3,
+        "tokens_per_char": 0.75,
+        "tokens_per_utf8_byte": 0.25,
+        "utf8_byte_count": 12,
+        "weight": 6.0
+      },
+      {
+        "category": "industry",
+        "char_count": 3,
+        "oversegmented_2": true,
+        "oversegmented_3": true,
+        "oversegmented_4": false,
+        "term": "半導體",
+        "token_count": 4,
+        "tokens_per_char": 1.3333333333333333,
+        "tokens_per_utf8_byte": 0.4444444444444444,
+        "utf8_byte_count": 9,
+        "weight": 6.0
+      },
+      {
+        "category": "place",
+        "char_count": 2,
+        "oversegmented_2": false,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "台北",
+        "token_count": 2,
+        "tokens_per_char": 1.0,
+        "tokens_per_utf8_byte": 0.3333333333333333,
+        "utf8_byte_count": 6,
+        "weight": 4.0
+      },
+      {
+        "category": "place",
+        "char_count": 2,
+        "oversegmented_2": false,
+        "oversegmented_3": false,
+        "oversegmented_4": false,
+        "term": "臺南",
+        "token_count": 2,
+        "tokens_per_char": 1.0,
+        "tokens_per_utf8_byte": 0.3333333333333333,
+        "utf8_byte_count": 6,
+        "weight": 4.0
+      },
+      {
+        "category": "taigi_romanization",
+        "char_count": 6,
+        "oversegmented_2": true,
+        "oversegmented_3": true,
+        "oversegmented_4": true,
+        "term": "Tâi-gí",
+        "token_count": 6,
+        "tokens_per_char": 1.0,
+        "tokens_per_utf8_byte": 0.75,
+        "utf8_byte_count": 8,
+        "weight": 4.0
+      },
+      {
+        "category": "taigi_romanization",
+        "char_count": 7,
+        "oversegmented_2": true,
+        "oversegmented_3": true,
+        "oversegmented_4": false,
+        "term": "tshit-á",
+        "token_count": 4,
+        "tokens_per_char": 0.5714285714285714,
+        "tokens_per_utf8_byte": 0.5,
+        "utf8_byte_count": 8,
+        "weight": 4.0
+      },
+      {
+        "category": "hakka_romanization",
+        "char_count": 6,
+        "oversegmented_2": true,
+        "oversegmented_3": true,
+        "oversegmented_4": true,
+        "term": "Hak-kâ",
+        "token_count": 5,
+        "tokens_per_char": 0.8333333333333334,
+        "tokens_per_utf8_byte": 0.7142857142857143,
+        "utf8_byte_count": 7,
+        "weight": 4.0
+      },
+      {
+        "category": "bopomofo",
+        "char_count": 3,
+        "oversegmented_2": true,
+        "oversegmented_3": true,
+        "oversegmented_4": false,
+        "term": "ㄅㄆㄇ",
+        "token_count": 4,
+        "tokens_per_char": 1.3333333333333333,
+        "tokens_per_utf8_byte": 0.4444444444444444,
+        "utf8_byte_count": 9,
+        "weight": 4.0
+      }
+    ]
+  },
+  "ok": false,
+  "performance_metrics": null,
+  "quality_gate_failures": [
+    "missing rich transcription structural tokens: ['<|transcript_start|>', '<|transcript_end|>', '<|segment_start|>', '<|segment_end|>', '<|speaker|>', '<|start_time|>', '<|end_time|>', '<|duration|>', '<|content|>', '<|non_speech_event|>']"
+  ],
+  "rich_transcription_metrics": {
+    "decoded_examples_checked": [
+      "rich_json_001",
+      "rich_json_002",
+      "rich_text_001"
+    ],
+    "dense_timestamp_tokens_found": [],
+    "json_roundtrip_ok": true,
+    "missing_structural_tokens": [
+      "<|transcript_start|>",
+      "<|transcript_end|>",
+      "<|segment_start|>",
+      "<|segment_end|>",
+      "<|speaker|>",
+      "<|start_time|>",
+      "<|end_time|>",
+      "<|duration|>",
+      "<|content|>",
+      "<|non_speech_event|>"
+    ],
+    "non_speech_labels_preserved": true,
+    "parsed_json_after_decode_ok": true,
+    "required_fields_present": true,
+    "required_non_speech_labels": [
+      "[Silence]",
+      "[Noise]",
+      "[Music]",
+      "[Unintelligible Speech]"
+    ],
+    "required_structural_tokens": [
+      "<|transcript_start|>",
+      "<|transcript_end|>",
+      "<|segment_start|>",
+      "<|segment_end|>",
+      "<|speaker|>",
+      "<|start_time|>",
+      "<|end_time|>",
+      "<|duration|>",
+      "<|content|>",
+      "<|non_speech_event|>"
+    ],
+    "required_timestamp_strings": [
+      "0.00",
+      "3.42",
+      "10.25",
+      "3575.50"
+    ],
+    "rich_transcription_token_ids": {
+      "<|content|>": null,
+      "<|duration|>": null,
+      "<|end_time|>": null,
+      "<|non_speech_event|>": null,
+      "<|segment_end|>": null,
+      "<|segment_start|>": null,
+      "<|speaker|>": null,
+      "<|start_time|>": null,
+      "<|transcript_end|>": null,
+      "<|transcript_start|>": null
+    },
+    "rich_transcription_tokens_present": false,
+    "rich_transcription_total_tokens": 416,
+    "timestamp_precision_digits": 2,
+    "timestamp_strings_preserved": true
+  },
+  "script_metrics": {
+    "ascii_punctuation": {
+      "char_count": 315,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 584,
+      "tokens_per_char_when_present": 1.853968253968254
+    },
+    "bopomofo_chars": {
+      "char_count": 15,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 213,
+      "tokens_per_char_when_present": 14.2
+    },
+    "cjk_punctuation": {
+      "char_count": 92,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 786,
+      "tokens_per_char_when_present": 8.543478260869565
+    },
+    "digits": {
+      "char_count": 103,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 528,
+      "tokens_per_char_when_present": 5.12621359223301
+    },
+    "emoji_or_symbol_chars": {
+      "char_count": 59,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 223,
+      "tokens_per_char_when_present": 3.7796610169491527
+    },
+    "latin_chars": {
+      "char_count": 644,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 656,
+      "tokens_per_char_when_present": 1.0186335403726707
+    },
+    "latin_diacritic_chars": {
+      "char_count": 13,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 310,
+      "tokens_per_char_when_present": 23.846153846153847
+    },
+    "traditional_han_like_chars": {
+      "char_count": 388,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 786,
+      "tokens_per_char_when_present": 2.0257731958762886
+    },
+    "whitespace_chars": {
+      "char_count": 57,
+      "roundtrip_ok_rate_when_present": 1.0,
+      "token_count_for_examples_containing_script": 694,
+      "tokens_per_char_when_present": 12.175438596491228
+    }
+  },
+  "subset_metrics": {
+    "bopomofo": {
+      "chars_per_token": 1.1578947368421053,
+      "mean_cjk_char_fertility": 1.888888888888889,
+      "num_examples": 3,
+      "p50_cjk_char_fertility": 1.5,
+      "p90_cjk_char_fertility": 2.566666666666667,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": 3.1666666666666665,
+      "tokens_per_char": 0.8636363636363636,
+      "tokens_per_cjk_char": 1.8095238095238095,
+      "tokens_per_latin_char": null,
+      "tokens_per_utf8_byte": 0.3220338983050847,
+      "total_bopomofo_chars": 12,
+      "total_chars": 44,
+      "total_cjk_chars": 21,
+      "total_latin_chars": 0,
+      "total_tokens": 38,
+      "total_utf8_bytes": 118,
+      "utf8_bytes_per_token": 3.1052631578947367,
+      "weighted_cjk_char_fertility": 1.8095238095238095
+    },
+    "hakka_romanized": {
+      "chars_per_token": 1.9242424242424243,
+      "mean_cjk_char_fertility": 5.8690476190476195,
+      "num_examples": 3,
+      "p50_cjk_char_fertility": 7.25,
+      "p90_cjk_char_fertility": 8.65,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": null,
+      "tokens_per_char": 0.5196850393700787,
+      "tokens_per_cjk_char": 3.3,
+      "tokens_per_latin_char": 0.8571428571428571,
+      "tokens_per_utf8_byte": 0.34554973821989526,
+      "total_bopomofo_chars": 0,
+      "total_chars": 127,
+      "total_cjk_chars": 20,
+      "total_latin_chars": 77,
+      "total_tokens": 66,
+      "total_utf8_bytes": 191,
+      "utf8_bytes_per_token": 2.893939393939394,
+      "weighted_cjk_char_fertility": 3.3
+    },
+    "rich_transcription_json": {
+      "chars_per_token": 2.1597222222222223,
+      "mean_cjk_char_fertility": 4.487179487179487,
+      "num_examples": 2,
+      "p50_cjk_char_fertility": 4.487179487179487,
+      "p90_cjk_char_fertility": 4.487179487179487,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": 96.0,
+      "tokens_per_char": 0.4630225080385852,
+      "tokens_per_cjk_char": 7.384615384615385,
+      "tokens_per_latin_char": 1.0034843205574913,
+      "tokens_per_utf8_byte": 0.401673640167364,
+      "total_bopomofo_chars": 3,
+      "total_chars": 622,
+      "total_cjk_chars": 39,
+      "total_latin_chars": 287,
+      "total_tokens": 288,
+      "total_utf8_bytes": 717,
+      "utf8_bytes_per_token": 2.4895833333333335,
+      "weighted_cjk_char_fertility": 4.487179487179487
+    },
+    "rich_transcription_structured_text": {
+      "chars_per_token": 1.90625,
+      "mean_cjk_char_fertility": 5.818181818181818,
+      "num_examples": 1,
+      "p50_cjk_char_fertility": 5.818181818181818,
+      "p90_cjk_char_fertility": 5.818181818181818,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": null,
+      "tokens_per_char": 0.5245901639344263,
+      "tokens_per_cjk_char": 5.818181818181818,
+      "tokens_per_latin_char": 0.9696969696969697,
+      "tokens_per_utf8_byte": 0.43537414965986393,
+      "total_bopomofo_chars": 0,
+      "total_chars": 244,
+      "total_cjk_chars": 22,
+      "total_latin_chars": 132,
+      "total_tokens": 128,
+      "total_utf8_bytes": 294,
+      "utf8_bytes_per_token": 2.296875,
+      "weighted_cjk_char_fertility": 5.818181818181818
+    },
+    "taigi_han_roman_mixed": {
+      "chars_per_token": 1.5964912280701755,
+      "mean_cjk_char_fertility": 2.136904761904762,
+      "num_examples": 3,
+      "p50_cjk_char_fertility": 2.4285714285714284,
+      "p90_cjk_char_fertility": 2.5857142857142854,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": null,
+      "tokens_per_char": 0.6263736263736264,
+      "tokens_per_cjk_char": 1.9655172413793103,
+      "tokens_per_latin_char": 1.3571428571428572,
+      "tokens_per_utf8_byte": 0.33727810650887574,
+      "total_bopomofo_chars": 0,
+      "total_chars": 91,
+      "total_cjk_chars": 29,
+      "total_latin_chars": 42,
+      "total_tokens": 57,
+      "total_utf8_bytes": 169,
+      "utf8_bytes_per_token": 2.9649122807017543,
+      "weighted_cjk_char_fertility": 1.9655172413793103
+    },
+    "taiwan_code_switching": {
+      "chars_per_token": 2.2439024390243905,
+      "mean_cjk_char_fertility": 1.723809523809524,
+      "num_examples": 3,
+      "p50_cjk_char_fertility": 1.7142857142857142,
+      "p90_cjk_char_fertility": 1.8285714285714285,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": null,
+      "tokens_per_char": 0.44565217391304346,
+      "tokens_per_cjk_char": 1.7083333333333333,
+      "tokens_per_latin_char": 0.8723404255319149,
+      "tokens_per_utf8_byte": 0.2733333333333333,
+      "total_bopomofo_chars": 0,
+      "total_chars": 92,
+      "total_cjk_chars": 24,
+      "total_latin_chars": 47,
+      "total_tokens": 41,
+      "total_utf8_bytes": 150,
+      "utf8_bytes_per_token": 3.658536585365854,
+      "weighted_cjk_char_fertility": 1.7083333333333333
+    },
+    "taiwan_mandarin_colloquial": {
+      "chars_per_token": 1.1428571428571428,
+      "mean_cjk_char_fertility": 1.0534188034188035,
+      "num_examples": 3,
+      "p50_cjk_char_fertility": 1.0769230769230769,
+      "p90_cjk_char_fertility": 1.082051282051282,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": null,
+      "tokens_per_char": 0.875,
+      "tokens_per_cjk_char": 1.05,
+      "tokens_per_latin_char": null,
+      "tokens_per_utf8_byte": 0.2916666666666667,
+      "total_bopomofo_chars": 0,
+      "total_chars": 48,
+      "total_cjk_chars": 40,
+      "total_latin_chars": 0,
+      "total_tokens": 42,
+      "total_utf8_bytes": 144,
+      "utf8_bytes_per_token": 3.4285714285714284,
+      "weighted_cjk_char_fertility": 1.05
+    },
+    "taiwan_named_entities": {
+      "chars_per_token": 1.4050632911392404,
+      "mean_cjk_char_fertility": 0.959894641495042,
+      "num_examples": 4,
+      "p50_cjk_char_fertility": 0.9424342105263157,
+      "p90_cjk_char_fertility": 1.0133771929824562,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": null,
+      "tokens_per_char": 0.7117117117117117,
+      "tokens_per_cjk_char": 0.9634146341463414,
+      "tokens_per_latin_char": null,
+      "tokens_per_utf8_byte": 0.23723723723723725,
+      "total_bopomofo_chars": 0,
+      "total_chars": 111,
+      "total_cjk_chars": 82,
+      "total_latin_chars": 0,
+      "total_tokens": 79,
+      "total_utf8_bytes": 333,
+      "utf8_bytes_per_token": 4.215189873417722,
+      "weighted_cjk_char_fertility": 0.9634146341463414
+    },
+    "traditional_zh_formal": {
+      "chars_per_token": 1.5692307692307692,
+      "mean_cjk_char_fertility": 0.7040100250626566,
+      "num_examples": 5,
+      "p50_cjk_char_fertility": 0.6842105263157895,
+      "p90_cjk_char_fertility": 0.7684210526315789,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": null,
+      "tokens_per_char": 0.6372549019607843,
+      "tokens_per_cjk_char": 0.7065217391304348,
+      "tokens_per_latin_char": null,
+      "tokens_per_utf8_byte": 0.21241830065359477,
+      "total_bopomofo_chars": 0,
+      "total_chars": 102,
+      "total_cjk_chars": 92,
+      "total_latin_chars": 0,
+      "total_tokens": 65,
+      "total_utf8_bytes": 306,
+      "utf8_bytes_per_token": 4.707692307692308,
+      "weighted_cjk_char_fertility": 0.7065217391304348
+    },
+    "unicode_edge_cases": {
+      "chars_per_token": 1.4631578947368422,
+      "mean_cjk_char_fertility": 6.4318181818181825,
+      "num_examples": 3,
+      "p50_cjk_char_fertility": 7.75,
+      "p90_cjk_char_fertility": 8.75,
+      "roundtrip_failures": [],
+      "roundtrip_ok_rate": 1.0,
+      "tokens_per_bopomofo_char": null,
+      "tokens_per_char": 0.6834532374100719,
+      "tokens_per_cjk_char": 5.0,
+      "tokens_per_latin_char": 1.6101694915254237,
+      "tokens_per_utf8_byte": 0.45023696682464454,
+      "total_bopomofo_chars": 0,
+      "total_chars": 139,
+      "total_cjk_chars": 19,
+      "total_latin_chars": 59,
+      "total_tokens": 95,
+      "total_utf8_bytes": 211,
+      "utf8_bytes_per_token": 2.221052631578947,
+      "weighted_cjk_char_fertility": 5.0
+    }
+  },
+  "summary": {
+    "chars_per_token": 1.8020022246941045,
+    "num_examples": 30,
+    "pangolin_score": null,
+    "roundtrip_failures": [],
+    "roundtrip_ok_rate": 1.0,
+    "tokens_per_bopomofo_char": 59.93333333333333,
+    "tokens_per_char": 0.5549382716049382,
+    "tokens_per_cjk_char": 2.3170103092783507,
+    "tokens_per_latin_char": 1.3959627329192548,
+    "tokens_per_utf8_byte": 0.3414356247626282,
+    "total_bopomofo_chars": 15,
+    "total_chars": 1620,
+    "total_cjk_chars": 388,
+    "total_latin_chars": 644,
+    "total_tokens": 899,
+    "total_utf8_bytes": 2633,
+    "utf8_bytes_per_token": 2.92880978865406,
+    "vocab_size": 61875
+  },
+  "tokenizer_name": "tokenizer.json:/home/yuhuan/.cache/huggingface/hub/models--MediaTek-Research--Breeze-7B-Instruct-v1_0/snapshots/60d4fa07ae4ddd4174864b257be0563f1806cd6d/tokenizer.json",
+  "utf8_fragmentation_diagnostics": {
+    "available": false,
+    "reason": "token byte spans are not exposed by this adapter"
+  }
+}

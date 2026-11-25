@@ -1,0 +1,47 @@
+{
+  "model": "out/quantized/Yunmo-Next-1B-Instruct-FP8",
+  "revision": {
+    "source": "yuhuanstudio/Yunmo-Next-1B-Instruct",
+    "source_revision": "9b7a63c54048d7a9e809a48e116492af23dda3de",
+    "bits": 8,
+    "scheme": "torchao FP8 e4m3 weights, dynamic per-row FP8 activations"
+  },
+  "dtype": "bfloat16",
+  "batch": 1,
+  "weights_bytes": 1079959040,
+  "decode_tokens": 64,
+  "prefill_chunk_tokens": 4096,
+  "device": "NVIDIA GeForce RTX 4070 Ti",
+  "rows": [
+    {
+      "context_tokens": 1024,
+      "prefill_seconds": 0.903457038992201,
+      "prefill_tokens_per_second": 1133.4241206889747,
+      "state_bytes_after_prefill": 49217536,
+      "decode_ms_per_token": 849.5368000312737,
+      "peak_allocated_bytes": 1301517824,
+      "static_decode_ms_per_token": 16.158486343783807,
+      "static_decode_peak_allocated_bytes": 1342990336
+    },
+    {
+      "context_tokens": 4096,
+      "prefill_seconds": 0.9446735389938112,
+      "prefill_tokens_per_second": 4335.889416742553,
+      "state_bytes_after_prefill": 106258944,
+      "decode_ms_per_token": 1018.107337437641,
+      "peak_allocated_bytes": 2940928512,
+      "static_decode_ms_per_token": 16.74063871882936,
+      "static_decode_peak_allocated_bytes": 3006120960
+    },
+    {
+      "context_tokens": 16384,
+      "prefill_seconds": 3.50881046098948,
+      "prefill_tokens_per_second": 4669.388723658711,
+      "state_bytes_after_prefill": 201515520,
+      "decode_ms_per_token": 1022.459107265604,
+      "peak_allocated_bytes": 3762487808,
+      "static_decode_ms_per_token": 18.71734721885332,
+      "static_decode_peak_allocated_bytes": 3900606976
+    }
+  ]
+}
